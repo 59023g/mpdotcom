@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-doUI
-====
+mp website
 
-On screen graphics for sports video stream smooth operators.
-=======
-mp.com
-======
->>>>>>> FETCH_HEAD
+node, express 3, angular-ui router, jquery, mongo
