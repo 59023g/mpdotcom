@@ -1,0 +1,196 @@
+@import "./normalize.css";
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-padding-start: 0;
+  -webkit-padding-after: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-end: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body,
+#intro {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: myriad pro;
+  font-size: 16px;
+  line-height: 21px;
+  color: #222;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+#controls {
+  position: fixed;
+  width: 109px;
+  height: 38px;
+  z-index: 30;
+  left: 100px;
+  top: 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+
+#controls #navigate-forward {
+  opacity: 1;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  right: -3px;
+  cursor: pointer;
+}
+
+#controls #navigate-back {
+  opacity: 1;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#controls .hidden {
+  opacity: 0;
+  transition: all .2s ease;
+}
+
+#controls .seen {
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+#menu {
+  position: fixed;
+  width: 110px;
+  height: 200px;
+  z-index: 30;
+  left: 10px;
+  top: 10px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+}
+
+.horizontal-gradient {
+  background: #fd500d;
+  background: linear-gradient(to right,#fd500d 0%,#ff3535 100%);
+}
+
+.bg-black {
+  background: #000;
+}
+
+.bg-pictage {
+  background: #00f;
+}
+
+.bg-test {
+  background: url("http://p.michaelepierce.com/img/feb%2017%20(9).JPG");background-size:cover}#spinnerWrap,#intro-text{position:absolute;left:50%;top:50%;z-index:99}#spinnerWrap{width:48px;height:48px;margin-top:-24px;margin-left:-24px;opacity:1;transition:opacity .5s ease;-o-transition:opacity .5s ease;-moz-transition:opacity .5s ease;-webkit-transition:opacity .5s ease;}#spinnerWrap.fadeOut{opacity:0}#spinner{position:relative;width:48px;height:48px;display:block;background-image:url("http://andychung.me/images/spinner@2x.png");
+  background-size: 48px 48px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: .8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: .8s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-timing-function: linear;
+}
+
+#intro {
+  position: relative;
+}
+
+#intro-text {
+  color: #fff;
+  width: 300px;
+  height: auto;
+  margin-left: -150px;
+  margin-top: -100px;
+  text-align: center;
+}
+
+.intro-detail {
+  text-align: justify;
+}
+
+#main {
+  background-color: #ccc;
+  width: 628px;
+  margin: 0 auto;
+}
+
+.project {
+  padding: 250px 0;
+}
+
+[ui-view] {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.ui-view-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+  }
+}

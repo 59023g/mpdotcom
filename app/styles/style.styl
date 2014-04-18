@@ -1,0 +1,233 @@
+@import "./normalize.css"
+
+color-left = #FD500D
+color-right = #FF3535 
+
+*, *:after, *:before
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+  -webkit-padding-start 0
+  -webkit-padding-after 0
+  -webkit-padding-before 0
+  -webkit-padding-end 0
+  margin 0 
+  padding 0
+
+html 
+  overflow-x hidden
+html, body, #intro
+  height 100%
+  width 100%
+  
+body 
+  font-family myriad pro
+  font-size 16px
+  line-height 21px
+  color #222
+  //-webkit-transform translate3d(0,0,0)
+  //-moz-transform translate3d(0,0,0)
+  //-ms-transform translate3d(0,0,0)
+  //-o-transform translate3d(0,0,0)
+  //transform translate3d(0,0,0)  
+
+h2 
+  font-size 16px
+  font-weight 600
+
+.container 
+  width 100%
+  height 100%
+ 
+#controls 
+  position fixed
+  width 109px
+  height 38px
+  z-index 30
+  left 100px
+  top 50px
+  border 1px solid #e5e5e5
+  //background-color rgba(255,255,255, 1)
+  -webkit-border-radius 5px 
+  -moz-border-radius 5px
+  border-radius 5px 
+  #navigate-forward 
+    opacity 1
+    position absolute
+    padding 0
+    border 0 
+    right -3px
+    cursor pointer
+  #navigate-back 
+    opacity 1
+    position absolute
+    padding 0
+    border 0 
+    left 0
+    cursor pointer
+
+  .hidden
+    opacity 0
+    -webkit-transition all .2s ease
+    -moz-transition all .2s ease
+    -ms-transition all .2s ease
+    -o-transition all .2s ease
+    transition all .2s ease 
+  .seen
+    opacity 1
+    -webkit-transition all .2s ease
+    -moz-transition all .2s ease
+    -ms-transition all .2s ease
+    -o-transition all .2s ease
+    transition all .2s ease    
+
+ #menu 
+  position fixed
+  width 110px
+  height 200px
+  z-index 30
+  left 10px
+  top 10px
+  border 1px solid #e5e5e5
+  background-color rgba(255,255,255, 1)
+  -webkit-border-radius 5px      
+  
+.horizontal-gradient 
+  background color-left
+  background -moz-linear-gradient(left, color-left 0%, color-right 100%)
+  background -webkit-gradient(linear, left top, right top, color-stop(0%, color-left), color-stop(100%, color-right))
+  background -webkit-linear-gradient(left, color-left 0%, color-right 100%)
+  background -o-linear-gradient(left, color-left 0%, color-right 100%)
+  background -ms-linear-gradient(left, color-left 0%, color-right 100%)
+  background linear-gradient(to right, color-left 0%, color-right 100%)
+
+.bg-black
+  background black
+
+.bg-pictage
+  background blue
+  
+.bg-test
+  background url('http://p.michaelepierce.com/img/feb%2017%20(9).JPG')
+  background-size cover
+  
+#spinnerWrap, #intro-text
+  position absolute
+  left 50%
+  top 50%
+  z-index 99
+
+#spinnerWrap
+  width 48px
+  height 48px
+  margin-top -24px
+  margin-left -24px
+  opacity 1
+  transition opacity .5s ease
+  -o-transition opacity .5s ease
+  -moz-transition opacity .5s ease
+  -webkit-transition opacity .5s ease
+  &.fadeOut
+    opacity 0
+
+#spinner
+  position relative
+  width 48px
+  height 48px
+  display block
+  background-image url('http://andychung.me/images/spinner@2x.png')
+  background-size 48px 48px
+  -webkit-animation-name spin
+  -webkit-animation-duration .8s
+  -webkit-animation-iteration-count infinite
+  -webkit-animation-fill-mode forwards
+  -webkit-animation-timing-function linear
+  -moz-animation-name spin
+  -moz-animation-duration .8s
+  -moz-animation-iteration-count infinite
+  -moz-animation-fill-mode forwards
+  -moz-animation-timing-function linear
+
+@keyframes spin
+  0% 
+    -webkit-transform rotateZ(0deg)
+
+  100%
+    -webkit-transform rotateZ(360deg)
+    -moz-transform rotateZ(360deg)
+    -o-transform rotateZ(360deg)
+
+#intro
+  position relative
+
+#intro-text
+  color white
+  width 300px
+  height auto
+  margin-left -150px
+  margin-top -100px
+  text-align center
+
+.intro-detail
+  text-align justify
+
+#main 
+  background-color #CCC
+  width 628px
+  margin 0 auto
+
+
+.project
+  padding 250px 0
+
+
+// animate
+[ui-view]
+  height 100%
+  position absolute
+  width 100%
+
+.ui-view-container
+  position relative
+  height 100%
+  width 100%
+
+/*
+[ui-view].ng-enter, [ui-view].ng-leave
+  position absolute
+  left 0
+  right 0
+  -webkit-transition opacity .5s ease-in-out
+  -moz-transition opacity .5s ease-in-out
+  -o-transition opacity .5s ease-in-out
+  transition opacity .5s ease-in-out
+
+// This is the class that will be animated *FROM* when a new [ui-view] is added 
+[ui-view].ng-enter
+  opacity 0
+  -webkit-transform tramslate3d(0.5, 0.5, 0.5)
+  -moz-transform tramslate3d(0.5, 0.5, 0.5)
+  transform tramslate3d(0.5, 0.5, 0.5)
+
+// This is the class that will be animated *TO* when a new [ui-view] is added 
+[ui-view].ng-enter-active
+  opacity 1
+  -webkit-transform tramslate3d(1, 1, 1)
+  -moz-transform tramslate3d(1, 1, 1)
+  transform tramslate3d(1, 1, 1)
+
+// This is the class that will be animated *FROM* when a [ui-view] is removed 
+[ui-view].ng-leave
+  opacity 1
+  -webkit-transform translate3d(0, 0, 0)
+  -moz-transform translate3d(0, 0, 0)
+  transform translate3d(0, 0, 0)
+
+//This is the class that will be animated *TO* when a [ui-view] is removed
+[ui-view].ng-leave-active
+  opacity 1
+  -webkit-transform translate3d(0, 0, 0)
+  -moz-transform translate3d(0, 0, 0)
+  transform translate3d(0, 0, 0)
+  */
+  

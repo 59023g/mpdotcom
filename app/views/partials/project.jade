@@ -1,0 +1,11 @@
+section#intro(class="bg-{{ $stateParams.project }}")
+  div#intro-text
+    h2 $stateParams:  {{ $stateParams }}
+ui-view.project
+    
+//-aside#controls
+  a(ui-sref='/')
+    div.navigate-left.enabled
+  div.navigate-right
+  div.navigate-up
+  div.navigate-down

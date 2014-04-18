@@ -1,0 +1,12 @@
+todo
+
+controls - http://slid.es/timkindberg/ui-router
+transitions
+loader
+	lazy
+	state preload
+social media icons 
+	twitter
+keypress/
+swipe
+
