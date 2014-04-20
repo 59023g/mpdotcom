@@ -32,40 +32,30 @@ html.no-js
 
     // Add your site or application content here
     script.
-      (function load () {
-        var spinner = '<div id="spinnerWrap"><div id="spinner"></div></div>'
-        var body = document.getElementsByTagName('body');
-        document.body.innerHTML += spinner;
-      })();
-      window.onload = function() {
-        var spinner = document.getElementById('spinnerWrap')
-        spinner.parentNode.removeChild(spinner);
-        };
+
       
 
 
-    .ui-view-container.bg-black
+    .ui-view-container.bg-white
       div(ui-view)
 
-    aside#controls
-      a(ng-click="back()")
-        #navigate-back
-          svg(width="56" height="36" )
-            path(id="back-bg" class="hidden" fill="#e5e5e5" d="M2.5,0c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h51V0H2.5z M32.2,27L14,18l18.2-9V27z")
-            polygon(id="back-tri" fill="#e5e5e5" points="32.2,27 14,18 32.2,9 ")    
-      a(ng-click="next()")
-        #navigate-forward
-          svg(width="56" height="36" )
-            path(id="forward-bg"  fill="#e5e5e5" d="M49.5,0h-51v36h51c2.2,0,4-1.8,4-4V4C53.5,1.8,51.7,0,49.5,0z M19.9,27V9l18.2,9L19.9,27z")
-            polygon(id="forward-tri" class="hidden" fill="#e5e5e5" points="19.9,27 38.1,18 19.9,9 ")    
+    menu
+      h2(style='color: blue;margin-bottom: 0') Michael E Pierce
+      p San Francisco, CA 
+      nav#controls
+        a(ng-click="back()")
+          #navigate-back
+            svg(width="49" height="28" )
+              path(id="back-bg" class="hidden" fill="#e5e5e5" d="M4,0C1.8,0,0,1.8,0,4v20c0,2.2,1.8,4,4,4h45V0H4z M30.4,21l-14.1-7l14.1-7V21z")
+              polygon(id="back-tri" fill="#e5e5e5" points="30.4,21 16.3,14 30.4,7")    
+        a(ng-click="next()")
+          #navigate-forward
+            svg(width="49" height="28" )
+              path(id="forward-bg"  fill="#e5e5e5" d="M45,0H0v28h45c2.2,0,4-1.8,4-4V4C49,1.8,47.2,0,45,0z M18.6,21V7l14.1,7L18.6,21z")
+              polygon(id="forward-tri" class="hidden" fill="#e5e5e5" points="18.6,21 32.7,14 18.6,7")  
+      p(style="bottom: 0; position: fixed") 415 696 9339  
 
 
-  
-    //-aside#menu
-      ul       
-        li(ng-repeat="project in projects") 
-          a(ng-click="")
-            {{ project.name }}
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     //-script.

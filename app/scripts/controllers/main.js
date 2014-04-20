@@ -4,7 +4,7 @@ angular.module('mpApp')
   .controller('MainCtrl', ['$scope', '$stateParams', '$state', 'Projects', '$rootScope',
     function($scope, $stateParams, $state, Projects, $rootScope) {
       /*$state.reload(function() {
-      	console.log('reloaded');
+        console.log('reloaded');
       });*/
       console.log($rootScope);
       //$rootScope.next();
@@ -17,9 +17,15 @@ angular.module('mpApp')
       })
         .$promise.then(
           function(data) {
+            $scope.project = data;
             console.log(data);
           }
       );
+
+
+
+
+
 
     }
   ]);

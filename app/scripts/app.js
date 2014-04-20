@@ -11,14 +11,28 @@ angular.module('mpApp', [
 
 .run(function($rootScope, $http, $state, $stateParams, $location, Projects) {
   /*$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-        //console.log(event);
-        //console.log(toState);
-        //console.log(toParams);
-        //console.log(fromState);
+        console.log(event);
+        console.log(toState);
+        console.log(toParams);
+        console.log(fromState);
         console.log(toParams);
         //event.preventDefault();
     });*/
 
+ /* $rootScope.$on('$viewContentLoading',
+    function(event, viewConfig) {
+      console.log(event);
+      console.log(viewConfig);
+    });
+
+  $rootScope.$on('$stateChangeSuccess', function() {
+    console.log('routeChangeSuccess');
+  });
+
+  $rootScope.$on('$viewContentLoaded',
+    function(event) {
+      console.log(event);
+    });*/
 
   $rootScope.$stateParams = $stateParams;
   $rootScope.$state = $state;

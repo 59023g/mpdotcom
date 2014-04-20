@@ -1,7 +1,15 @@
 section#intro(class="bg-{{ $stateParams.project }}")
-  div#intro-text
-    h2 $stateParams:  {{ $stateParams }}
+  #main
+    #top(ng-if="")
+    #left(class="{{ project.layout }} ") 
+      img(ng-repeat="image in project.images" ng-src="{{ image }}")
+    #right 
+      h2 {{ project.name }}
+      p {{ project.copy }}
+      div(style="width:100px;height:30px;border:3px solid #00ff00;border-radius: 5px")
 ui-view.project
+
+
     
 //-aside#controls
   a(ui-sref='/')

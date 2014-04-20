@@ -17,7 +17,7 @@ color-right = #FF3535
 html 
   overflow-x hidden
 html, body, #intro
-  height 100%
+  height 101%
   width 100%
   
 body 
@@ -31,21 +31,43 @@ body
   //-o-transform translate3d(0,0,0)
   //transform translate3d(0,0,0)  
 
+p 
+  font-size 14px
+  line-height 21px
+  margin-bottom 14px
+   
 h2 
   font-size 16px
   font-weight 600
+  margin-bottom 7px
 
+img
+  width 100%
+  height auto
+  margin-bottom 20px
+  border-radius 5px
+  webkit-border-radius 5px
+  moz-border-radius 5px
+  box-shadow 0 2px 8px rgba(0, 0, 0, 0.15)
+  
 .container 
   width 100%
   height 100%
- 
-#controls 
+
+menu 
   position fixed
-  width 109px
-  height 38px
+  width 110px
+  height 200px
   z-index 30
   left 100px
   top 50px
+
+   
+#controls 
+  position relative
+  width 100px //109
+  height 30px // 38
+  z-index 30
   border 1px solid #e5e5e5
   //background-color rgba(255,255,255, 1)
   -webkit-border-radius 5px 
@@ -56,7 +78,7 @@ h2
     position absolute
     padding 0
     border 0 
-    right -3px
+    right 0px
     cursor pointer
   #navigate-back 
     opacity 1
@@ -81,17 +103,9 @@ h2
     -o-transition all .2s ease
     transition all .2s ease    
 
- #menu 
-  position fixed
-  width 110px
-  height 200px
-  z-index 30
-  left 10px
-  top 10px
-  border 1px solid #e5e5e5
-  background-color rgba(255,255,255, 1)
-  -webkit-border-radius 5px      
-  
+   
+
+// BACKGROUNDS 
 .horizontal-gradient 
   background color-left
   background -moz-linear-gradient(left, color-left 0%, color-right 100%)
@@ -104,13 +118,21 @@ h2
 .bg-black
   background black
 
-.bg-pictage
-  background blue
+.bg-pictage-inc
+  background white
   
 .bg-test
   background url('http://p.michaelepierce.com/img/feb%2017%20(9).JPG')
   background-size cover
-  
+  opacity 0
+  transition opacity .5s ease
+  -o-transition opacity .5s ease
+  -moz-transition opacity .5s ease
+  -webkit-transition opacity .5s ease
+
+//// END BACKGROUNDS
+
+// LOADING SPINNER
 #spinnerWrap, #intro-text
   position absolute
   left 50%
@@ -118,10 +140,10 @@ h2
   z-index 99
 
 #spinnerWrap
+  left 100px
+  top 250px
   width 48px
   height 48px
-  margin-top -24px
-  margin-left -24px
   opacity 1
   transition opacity .5s ease
   -o-transition opacity .5s ease
@@ -157,6 +179,9 @@ h2
     -moz-transform rotateZ(360deg)
     -o-transform rotateZ(360deg)
 
+////// END LOADING SPINNER 
+
+
 #intro
   position relative
 
@@ -172,16 +197,34 @@ h2
   text-align justify
 
 #main 
-  background-color #CCC
   width 628px
   margin 0 auto
+  padding-top 50px
 
+#left 
+  margin-right 21px
+  float left 
+  opacity 0
+  transition opacity .5s ease
+  -o-transition opacity .5s ease
+  -moz-transition opacity .5s ease
+  -webkit-transition opacity .5s ease
 
+.side 
+  width 300px
+  
+.top 
+  width 100%
+
+#right
+  width 48%
+  float left
+  
 .project
   padding 250px 0
 
 
-// animate
+// ANIMATIONS 
 [ui-view]
   height 100%
   position absolute
@@ -191,7 +234,25 @@ h2
   position relative
   height 100%
   width 100%
+  
+[ui-view].ng-enter,
+[ui-view].ng-leave
+  transition-timing-function ease
+  transition-duration 250ms
+  transition-property opacity
 
+[ui-view].ng-enter
+  opacity 0
+  &.ng-enter-active
+    opacity 1
+
+[ui-view].ng-leave
+  opacity 1
+  &.ng-leave-active
+    opacity 0
+
+
+//////
 /*
 [ui-view].ng-enter, [ui-view].ng-leave
   position absolute

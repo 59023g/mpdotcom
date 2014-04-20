@@ -1,3 +1,29 @@
+(function load() {
+  var spinner = '<div id="spinnerWrap"><div id="spinner"></div></div>'
+  var body = document.getElementsByTagName('body');
+  document.body.innerHTML += spinner;
+})();
+
+window.onload = function() {
+  console.log('load')
+  var spinner = document.getElementById('spinnerWrap')
+  var images = document.getElementById('left')
+  var intro = document.getElementById('intro')
+
+    function remove() {
+      spinner.parentNode.removeChild(spinner)
+    }
+    function show() {
+      intro.style.opacity = 1
+      images.style.opacity = 1
+      spinner.style.opacity = 0
+      setTimeout(remove, 1000);
+
+    }
+  setTimeout(show, 500)
+  
+};
+
 $('#navigate-back')
   .mouseenter(function() {
     $('path#back-bg').attr('class', 'hidden');
@@ -42,12 +68,12 @@ $('#controls')
   })
 
 $(function() {
-$(window).bind('keydown', function(e) {
-	console.log(e);
-  if (e.keyCode == '39') {
-    $scope.next();
-  } else if (e.keyCode == '37') {
-    $scope.back();
-  }
-});
+  $(window).bind('keydown', function(e) {
+    console.log(e);
+    if (e.keyCode == '39') {
+      $scope.next();
+    } else if (e.keyCode == '37') {
+      $scope.back();
+    }
+  });
 })

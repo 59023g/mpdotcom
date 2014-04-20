@@ -1,13 +1,15 @@
 {
-    "id": "samsung-galaxy-tab", 
-    "images": [
-        "img/phones/samsung-galaxy-tab.0.jpg", 
-        "img/phones/samsung-galaxy-tab.1.jpg", 
-        "img/phones/samsung-galaxy-tab.2.jpg", 
-        "img/phones/samsung-galaxy-tab.3.jpg", 
-        "img/phones/samsung-galaxy-tab.4.jpg", 
-        "img/phones/samsung-galaxy-tab.5.jpg", 
-        "img/phones/samsung-galaxy-tab.6.jpg"
-    ], 
-    "name": "Samsung Galaxy Tab\u2122"
+  "id": "samsung-galaxy-tab",
+  "images": [
+    "images/projects/pictageEmail_michaelPierce_sml.png",
+    "http://michaelepierce.com/assets/pictage/20130301_features-layout-mp.jpg",
+    "http://michaelepierce.com/assets/pictage/salesSite.jpg",
+    "http://michaelepierce.com/assets/pictage/microsite.jpg"
+
+
+  ],
+  "name": "Pictage, Inc",
+  "copy": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "layout": "side"
+
 }
