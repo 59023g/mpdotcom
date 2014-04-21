@@ -1,10 +1,35 @@
-section#intro.horizontal-gradient
-  div#intro-text
-    h2 $stateParams: {{ $stateParams }}
-    p Projects:
-    div(ng-repeat="project in projects")
-      p {{ project.name }}
-    div.intro-detail
+section#intro(class="bg-{{ $stateParams.project }}")
+  #main
+    #top(ng-show="project.layout === 'top'")
+      div(ng-switch="isLoading")
+        #spinnerWrap(ng-switch-when="true")
+          #spinner
+          span(style="text-align: center; position: absolute; left:16px; top: 14px")
+        div(ng-switch-when="false" ng-switch="isSuccessful" class="animate")
+          p(ng-switch-when="true" )
+            img(ng-repeat="src in imageLocations" ng-src="{{ src }}" )
+          p(ng-switch-when="false")
+            | POOPS
+    #left
+      .nativeLeft(ng-switch="isLoading" ng-hide="project.layout === 'top'")
+        #spinnerWrap(ng-switch-when="true")
+          #spinner
+          span(style="text-align: center; position: absolute; left:16px; top: 14px")
+        div(ng-switch-when="false" ng-switch="isSuccessful" class="animate")
+          p(ng-switch-when="true" )
+            img(ng-repeat="src in imageLocations" ng-src="{{ src }}"  )
+          p(ng-switch-when="false")
+            | POOPS
+      div(ng-show="project.layout === 'top'")
+        h2 {{ project.name }}
+        p {{ project.copy }}
+    #right 
+      div(ng-hide="project.layout === 'top'")
+        h2 {{ project.name }}
+        p {{ project.copy }}
+      //-div(class="{{ $stateParams.project }} cta ") Visit
+ui-view.project
+
 //-main#main 
   section.project
   Hi, I provide consulting and design production for small to medium sized businesses. I'm focused on digital marketing while also developing for the front-end web. In all endeavors I aim to make the customer happy.

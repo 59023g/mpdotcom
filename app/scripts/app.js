@@ -17,22 +17,14 @@ angular.module('mpApp', [
         console.log(fromState);
         console.log(toParams);
         //event.preventDefault();
-    });*/
+    });
 
- /* $rootScope.$on('$viewContentLoading',
+  $rootScope.$on('$viewContentLoading',
     function(event, viewConfig) {
       console.log(event);
       console.log(viewConfig);
-    });
-
-  $rootScope.$on('$stateChangeSuccess', function() {
-    console.log('routeChangeSuccess');
-  });
-
-  $rootScope.$on('$viewContentLoaded',
-    function(event) {
-      console.log(event);
     });*/
+
 
   $rootScope.$stateParams = $stateParams;
   $rootScope.$state = $state;
@@ -94,7 +86,6 @@ angular.module('mpApp', [
   $rootScope.detail = function() {
     $state.go('.detail');
   };
-
 
 
 })
