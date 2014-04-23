@@ -36,7 +36,7 @@ html.no-js
       div(ui-view)
 
     menu
-      div(style="")
+      .top-menu(class="bg-{{ $stateParams.project }} ")
         h2(style='color: blue;margin-bottom: 0') Michael E Pierce
         p(class=" {{ $stateParams.project }}") San Francisco, CA 
         nav#controls
@@ -50,7 +50,7 @@ html.no-js
               svg(width="49" height="28" )
                 path(id="forward-bg"  fill="#e5e5e5" d="M45,0H0v28h45c2.2,0,4-1.8,4-4V4C49,1.8,47.2,0,45,0z M18.6,21V7l14.1,7L18.6,21z")
                 polygon(id="forward-tri" class="hidden" fill="#e5e5e5" points="18.6,21 32.7,14 18.6,7")  
-      p(style="bottom: 0; position: fixed") 415 696 9339 
+      p(style="bottom: 0;left:100px; position: fixed") 415 696 9339 
 
 
 
@@ -69,9 +69,6 @@ html.no-js
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
-    <script src="bower_components/eventie/eventie.js"></script>
-    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -83,9 +80,7 @@ html.no-js
     <script src="scripts/filters/slice.js"></script>
     <script src="scripts/services/Auth.js"></script>
     <script src="scripts/directives/animate.js"></script>
-    <script src="scripts/directives/mpNav.js"></script>
     <script src="scripts/services/projects.js"></script>
-    <script src="scripts/directives/load.js"></script>
     <script src="scripts/services/preloader.js"></script>
     <!-- endbuild -->
     

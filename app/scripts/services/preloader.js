@@ -2,7 +2,7 @@
 
 angular.module('mpApp')
   .factory(
-    "preloader",
+    'preloader',
     function($q, $rootScope) {
 
       // I manage the preloading of image objects. Accepts an array of image URLs.
@@ -156,7 +156,7 @@ angular.module('mpApp')
           // than Resolving the deferred - you can call notify many times
           // before the ultimate resolution (or rejection) of the deferred.
           this.deferred.notify({
-            percent: Math.ceil(this.loadCount / (this.imageCount-.5) * 100),
+            percent: Math.ceil(this.loadCount / (this.imageCount) * 100),
             imageLocation: imageLocation
           });
 
@@ -224,7 +224,7 @@ angular.module('mpApp')
 
               }
           )
-            .prop("src", imageLocation);
+            .prop('src', imageLocation);
 
         }
 

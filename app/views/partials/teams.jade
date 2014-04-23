@@ -1,9 +1,0 @@
-{{ teams }}
-section 
-  ul
-    li(ng-repeat="team in teams")
-      span Team: {{ team.name }} | {{ team.city }} &nbsp;
-        span(ng-repeat="players in team.players")
-          span | Players: {{ players.p1 }} &nbsp; {{ players.p2 }} &nbsp; {{ players.p3 }}
-
-

@@ -9,8 +9,7 @@
     "angular-cookies": "1.2.11",
     "angular-sanitize": "1.2.11",
     "angular-ui-router": "latest",
-    "angular-animate": "latest",
-    "imagesloaded": "latest"
+    "angular-animate": "latest"
   },
   "devDependencies": {
     "angular-mocks": "1.2.11",

@@ -23,6 +23,7 @@ section#intro(class="bg-{{ $stateParams.project }}")
       div(ng-show="project.layout === 'top'")
         h2 {{ project.name }}
         p {{ project.copy }}
+        
     #right 
       div(ng-hide="project.layout === 'top'")
         h2 {{ project.name }}
@@ -30,12 +31,3 @@ section#intro(class="bg-{{ $stateParams.project }}")
       //-div(class="{{ $stateParams.project }} cta ") Visit
 ui-view.project
 
-//-main#main 
-  section.project
-  Hi, I provide consulting and design production for small to medium sized businesses. I'm focused on digital marketing while also developing for the front-end web. In all endeavors I aim to make the customer happy.
-//-aside#controls
-  div.navigate-left
-  a(ui-sref="two")
-    div.navigate-right.enabled
-  div.navigate-up
-  div.navigate-down

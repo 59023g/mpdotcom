@@ -1,40 +1,40 @@
-section#intro(class="bg-{{ $stateParams.project }}")
-  #main
-    #top(ng-show="project.layout === 'top'")
-      div(ng-switch="isLoading")
+main#intro(class="bg-{{ $stateParams.project }}")
+  section#content
+    #top(ng-show="$stateParams.project === 'global-lives-project'")
+      
+      .images(ng-switch="isLoading")
+        
         #spinnerWrap(ng-switch-when="true")
           #spinner
-          span(style="text-align: center; position: absolute; left:16px; top: 14px")
-        div(ng-switch-when="false" ng-switch="isSuccessful" class="animate")
+
+        .animate(ng-switch-when="false" ng-switch="isSuccessful")
           p(ng-switch-when="true" )
             img(ng-repeat="src in imageLocations" ng-src="{{ src }}" )
           p(ng-switch-when="false")
-            | POOPS
+            | Error loading
     #left
-      .nativeLeft(ng-switch="isLoading" ng-hide="project.layout === 'top'")
+      .images(ng-switch="isLoading" ng-hide="$stateParams.project === 'global-lives-project'")
+        
         #spinnerWrap(ng-switch-when="true")
           #spinner
-          span(style="text-align: center; position: absolute; left:16px; top: 14px") 
-        div(ng-switch-when="false" ng-switch="isSuccessful" class="animate")
+        
+        .animate(ng-switch-when="false" ng-switch="isSuccessful")
           p(ng-switch-when="true" )
             img(ng-repeat="src in imageLocations" ng-src="{{ src }}"  )
           p(ng-switch-when="false")
             | POOPS
-      div(ng-show="project.layout === 'top'")
+      
+      div(ng-show="$stateParams.project === 'global-lives-project'")
         h2 {{ project.name }}
         p {{ project.copy }}
+        ul
+          li(ng-repeat="tag in project.tags") {{ tag }}
     #right 
-      div(ng-hide="project.layout === 'top'")
+      div(ng-hide="$stateParams.project === 'global-lives-project'")
         h2 {{ project.name }}
         p {{ project.copy }}
-      div(class="{{ $stateParams.project }} cta ") Visit
+        ul
+          li(ng-repeat="tag in project.tags") {{ tag }}
+      a.cta(class="{{ $stateParams.project }}" href=" {{ project.url }} ") Visit
 ui-view.project
 
-
-    
-//-aside#controls
-  a(ui-sref='/')
-    div.navigate-left.enabled
-  div.navigate-right
-  div.navigate-up
-  div.navigate-down
