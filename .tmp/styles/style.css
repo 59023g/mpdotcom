@@ -134,11 +134,19 @@ menu .top-menu {
   color: #fff;
 }
 
+.bg-global-lives-project .cta:hover {
+  color: #222;
+}
+
 .bg-thingsthings {
   background: #40e0d0;
 }
 
-.thingsthings:hover {
+.bg-thingsthings {
+  height: 100%;
+}
+
+.bg-thingsthings .cta:hover {
   color: #40e0d0 !important;
 }
 
