@@ -39,15 +39,15 @@ html.no-js
     menu
       .top-menu
         a(ui-sref="/")
-          h2(style='color: blue;margin-bottom: 0') Michael E Pierce
+          h2(style='margin-bottom: 0' class=" {{ $stateParams.project }}") Michael E Pierce
         p(class=" {{ $stateParams.project }}") Consulting
         nav#controls
-          a(ng-click="back()")
+          a(ng-click="back()" ng-keydown="onKeydown" )
             #navigate-back
               svg(width="49" height="28" )
                 path(id="back-bg" class="hidden" fill="#e5e5e5" d="M4,0C1.8,0,0,1.8,0,4v20c0,2.2,1.8,4,4,4h45V0H4z M30.4,21l-14.1-7l14.1-7V21z")
                 polygon(id="back-tri" fill="#e5e5e5" points="30.4,21 16.3,14 30.4,7")    
-          a(ng-click="next()")
+          a(ng-click="next()" key-nav="next()")
             #navigate-forward
               svg(width="49" height="28" )
                 path(id="forward-bg"  fill="#e5e5e5" d="M45,0H0v28h45c2.2,0,4-1.8,4-4V4C49,1.8,47.2,0,45,0z M18.6,21V7l14.1,7L18.6,21z")
@@ -90,5 +90,6 @@ html.no-js
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/services/projects.js"></script>
     <script src="scripts/services/preloader.js"></script>
+    <script src="scripts/controllers/home.js"></script>
     <!-- endbuild -->
     

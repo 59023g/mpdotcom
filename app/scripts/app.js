@@ -101,7 +101,7 @@ angular.module('mpApp', [
     .state('/', {
       url: '/',
       templateUrl: 'partials/main',
-      controller: 'MainCtrl'
+      controller: 'HomeCtrl'
     })
     .state('project', {
       url: '/:project',

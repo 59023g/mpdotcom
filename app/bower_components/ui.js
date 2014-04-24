@@ -76,7 +76,7 @@ $('#controls')
     $('polygon#back-tri').attr('class', 'seen');
 
   })
-
+/*
 $(function() {
   $(window).bind('keydown', function(e) {
     console.log(e);
@@ -87,3 +87,4 @@ $(function() {
     }
   });
 })
+*/

@@ -123,6 +123,7 @@ menu .top-menu {
   transition: all .2s ease;
 }
 
+.home-bg,
 .horizontal-gradient {
   background: #fd500d;
   background: linear-gradient(to right,#fd500d 0%,#ff3535 100%);
@@ -176,6 +177,7 @@ menu .top-menu {
 
 #intro {
   position: relative;
+  height: 100%;
 }
 
 #intro-text {
@@ -226,16 +228,16 @@ menu .top-menu {
   cursor: pointer;
   width: 100px;
   height: 36px;
-  border: 3px solid #0f0;
+  border: 3px solid #00f;
   border-radius: 5px;
-  color: #0f0;
+  color: #00f;
   padding: 6px 32px 5px 32px;
   transition: all .2s ease;
 }
 
 .cta:hover {
   color: #fff;
-  background-color: #0f0;
+  background-color: #00f;
   transition: all .2s ease;
 }
 

@@ -1,26 +1,34 @@
-main#intro(class="")
-  <!-- The homepage has a lot of inline CSS... I know... Had to get this out! -->
-  section#content(style="width:496px")
-    #top(ng-show="$stateParams.project === 'global-lives-project'")
-      
-      .images(ng-switch="isLoading")
-        
-        #spinnerWrap(ng-switch-when="true")
-          #spinner
+.images(ng-switch="isLoading")
+  
+  #spinnerWrap(ng-switch-when="true")
+    #spinner
+  
+  .animate(ng-switch-when="false" ng-switch="isSuccessful")
+    div(ng-switch-when="true" style="width:100%;height:100%")
+      div(ng-repeat="src in imageLocations" style="background: url('{{ src }}');background-size: cover;height:100%;width:100%;position:absolute"  )
+    p(ng-switch-when="false")
+      | Error
 
-        .animate(ng-switch-when="false" ng-switch="isSuccessful")
-          p(ng-switch-when="true" )
-            img(ng-repeat="src in imageLocations" ng-src="{{ src }}" )
-          p(ng-switch-when="false")
-            | Error loading
-    #left(style="width:150px")
-      img(src="images/projects/me_web.png" style="width:150px;float:right;box-shadow:none")
-    #right(style="margin-left:174px") 
-      div(ng-hide="$stateParams.project === 'global-lives-project'" style="color:#222;margin-bottom:36px")
-        h2 Hello!
-        p The last four years I’ve worked with local to medium-sized businesses, providing end-to-end service from sales to web production. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
-        p Graduated from UW - Madison with a BA in Marketing and Philosophy
-        p You can find me running up Twin Peaks, biking around the city, and learning front-end web technologies.
-        p I built this site with Express 3, Angular 1.2, Mongo, Jade, and Sylus. Deployed on Ubuntu 13.10 x64.
-      a.cta(style="margin-top:12px" class="{{ $stateParams.project }}" href="global-lives-project") Projects
+  div(style="position:absolute;top:315px;left:100px;width:200px;z-index:99999")
+    h2 Hello!
+    p The last four years I’ve worked with local to medium-sized businesses, providing end-to-end service from sales to web production. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
+    p I built this site with Express 3, Angular 1.2, Mongo, Jade, and Stylus. Deployed on Ubuntu 13.10 x64.    
+    p(style='margin-bottom:24px') The background photo is from Pfeiffer Beach, last month.
+    a.cta(class="{{ $stateParams.project }}" href="global-lives-project") Projects
+    main#intro()
+      <!-- The homepage has a lot of inline CSS... I know... Had to get this out! -->
+      section#content(style="width:496px")
+        #top()
 
+        //-#left
+
+          //-img(src="images/projects/me_web.png" style="width:150px;float:right;box-shadow:none")
+        //-#right(style="margin-left:174px") 
+          div(ng-hide="$stateParams.project === 'global-lives-project'" style="color:#222;margin-bottom:36px")
+            h2 Hello!
+            p The last four years I’ve worked with local to medium-sized businesses, providing end-to-end service from sales to web production. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
+            p Graduated from UW - Madison with a BA in Marketing and Philosophy
+            p You can find me running up Twin Peaks, biking around the city, and learning front-end web technologies.
+            p I built this site with Express 3, Angular 1.2, Mongo, Jade, and Sylus. Deployed on Ubuntu 13.10 x64.
+          a.cta(style="margin-top:12px" class="{{ $stateParams.project }}" href="global-lives-project") Projects
+        div(style="clear:both")  }
