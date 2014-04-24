@@ -2,19 +2,18 @@
   "id": "global-lives-project",
   "images": [
     "images/projects/globalLives_digital.png"
-
-
   ],
   "name": "Global Lives Project",
-  "url": "http://globalLives.org",
-  "copy": "Supported by the National Endowment for the Arts, The Global Lives Project curates a collection of films that captures 24 hours in the day of life from individuals around the world. I was brought in to provide strategy for their 2013 fundraising campaign. Soon thereafter, I connected all their outgoing communications with Google Analytics. I then sent out weekly reports which served to help focus their efforts based on conversion rates. They raised 119% of their goal.",
+  "copy": [
+    "Supported by the National Endowment for the Arts, The Global Lives Project curates a collection of films that captures 24 hours in the day of life from individuals around the world.",
+    " I was brought in to provide strategy for their 2013 fundraising campaign. Soon thereafter, I connected all their outgoing communications with Google Analytics. I then sent out weekly reports which served to help focus their efforts based on conversion rates. They raised 119% of their goal.",
+    "From the Executive Director: \"Michael arrived just at the right time and jumped into a high-pressure project with tight deadlines and figured out exactly where he could help. \""
+  ],
   "tags": [
     "Strategy",
     "Google AdWords/Analytics",
     "Graphic design per brand specification"
   ],
-
+  "url": "http://globalLives.org",
   "layout": "top"
-
-
 }

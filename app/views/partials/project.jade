@@ -1,6 +1,6 @@
 main#intro(class="bg-{{ $stateParams.project }}")
   section#content
-    #top(ng-show="$stateParams.project === 'global-lives-project'")
+    #top(ng-show="project.layout === 'top'")
       
       .images(ng-switch="isLoading")
         
@@ -13,7 +13,7 @@ main#intro(class="bg-{{ $stateParams.project }}")
           p(ng-switch-when="false")
             | Error loading
     #left
-      .images(ng-switch="isLoading" ng-hide="$stateParams.project === 'global-lives-project'")
+      .images(ng-switch="isLoading" ng-hide="project.layout === 'top'")
         
         #spinnerWrap(ng-switch-when="true")
           #spinner
@@ -24,17 +24,17 @@ main#intro(class="bg-{{ $stateParams.project }}")
           p(ng-switch-when="false")
             | POOPS
       
-      div(ng-show="$stateParams.project === 'global-lives-project'")
+      div(ng-show="project.layout === 'top'")
         h2 {{ project.name }}
-        p {{ project.copy }}
+        p(ng-repeat="copy in project.copy") {{ copy }}
         ul
           li(ng-repeat="tag in project.tags") {{ tag }}
     #right 
-      div(ng-hide="$stateParams.project === 'global-lives-project'")
+      div(ng-hide="project.layout === 'top'")
         h2 {{ project.name }}
-        p {{ project.copy }}
+        p(ng-repeat="copy in project.copy") {{ copy }}
         ul
           li(ng-repeat="tag in project.tags") {{ tag }}
-      a.cta(class="{{ $stateParams.project }}" href=" {{ project.url }} ") Visit
-ui-view.project
+      a.cta(class="{{ $stateParams.project }}" href=" {{ project.url }} " target="_blank") Visit
+    div(style="clear:both")
 

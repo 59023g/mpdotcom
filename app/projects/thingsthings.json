@@ -1,0 +1,17 @@
+{
+  "id": "thingsthings",
+  "images": [
+    "images/projects/thingsthings_top.png"
+  ],
+  "name": "thingsthings.us",
+  "copy": [
+    "Lately, much of the web is Bootstrap. I find this boring. Thingsthings is an experiment in web design. I'm testing how people react to unconventional CSS/layouts.",
+    "So far, the average visitor spends 4 minutes on the site.",
+    "Disclaimer: I have worked with Bootstrap. And am more than willing to again."
+  ],
+  "tags": [
+    "CSS"
+  ],
+  "url": "http://thingsthings.us",
+  "layout": "top"
+}

@@ -6,23 +6,20 @@
 
 window.onload = function() {
   console.log('load')
-  var spinner = document.getElementById('spinnerWrap')
-  var imagesLeft = document.getElementById('left')
-  var imagesTop = document.getElementById('top')
-  var intro = document.getElementById('intro')
+  var spinner = document.getElementById('spinnerWrap');
+  var bgHome = document.querySelectorAll('.bg-home');
+  console.log(bgHome);
 
-    function remove() {
-      spinner.parentNode.removeChild(spinner)
-    }
+  function remove() {
+    spinner.parentNode.removeChild(spinner)
+  }
 
-    function show() {
-      intro.style.opacity = 1
-      imagesLeft.style.opacity = 1
-      //imagesTop.style.opacity = 1
-      spinner.style.opacity = 0
-      setTimeout(remove, 1000);
+  function show() {
+    //bgHome.style.opacity = 1
+    spinner.style.opacity = 0
+    setTimeout(remove, 1000);
 
-    }
+  }
   setTimeout(show, 500)
 
 };
@@ -36,6 +33,7 @@ var inite = function() {
   load();
 };
 */
+
 $('#navigate-back')
   .mouseenter(function() {
     $('path#back-bg').attr('class', 'hidden');
