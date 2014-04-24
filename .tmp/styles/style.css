@@ -177,7 +177,6 @@ menu .top-menu {
 
 #intro {
   position: relative;
-  height: 100%;
 }
 
 #intro-text {
@@ -212,6 +211,7 @@ menu .top-menu {
   margin-right: 21px;
   float: left;
   opacity: 1;
+  margin-top: -8px;
 }
 
 #right {

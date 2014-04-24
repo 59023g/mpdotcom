@@ -328,9 +328,10 @@ module.exports = function(grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'images/{,*/}*.{webp}',
+            //'images/{,*/}*.{webp}',
             'fonts/**/*',
-            'projects/**'
+            'projects/**',
+            'images/**/*.jpg'
           ]
         }, {
           expand: true,
@@ -340,9 +341,9 @@ module.exports = function(grunt) {
           src: '**/*.jade'
         }, {
           expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/public/images',
-          src: ['generated/*']
+          cwd: '<%= yeoman.app %>/images',
+          src: '**/*.{png,jpg,jpeg,gif}',
+          dest: '<%= yeoman.dist %>/public/images'
         }, {
           expand: true,
           dest: '<%= yeoman.dist %>',
