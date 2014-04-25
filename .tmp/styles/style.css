@@ -130,7 +130,7 @@ menu .top-menu {
 }
 
 .bg-global-lives-project {
-  background: #2b2b2b;
+  background-color: #2b2b2b;
   color: #fff;
 }
 
@@ -139,11 +139,7 @@ menu .top-menu {
 }
 
 .bg-thingsthings {
-  background: #40e0d0;
-}
-
-.bg-thingsthings {
-  height: 100%;
+  background-color: #40e0d0;
 }
 
 .bg-thingsthings .cta:hover {
@@ -185,6 +181,8 @@ menu .top-menu {
 
 #intro {
   position: relative;
+  height: auto;
+  min-height: 100%;
 }
 
 #intro-text {
