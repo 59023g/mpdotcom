@@ -33,12 +33,12 @@ angular.module('mpApp')
               preloader.preloadImages($scope.imageLocations).then(
                 function handleResolve() {
 
-                  function imageLoad() {
+                  //function imageLoad() {
                     $scope.isLoading = false;
                     $scope.isSuccessful = true;
-                  }
+                  //}
 
-                  $timeout(imageLoad, 250);
+                  //$timeout(imageLoad, 500);
                   console.info('Preload Successful');
 
                 },
