@@ -3,17 +3,6 @@
 color-left = #FD500D
 color-right = #FF3535 
 
-
-background-linear-gradient(startPoint, startColor, startInterval, endColor, endInterval, deprecatedWebkitStartPoint = false, deprecatedWebkitEndPoint = false)
-  background-color startColor
-  if deprecatedWebkitStartPoint && deprecatedWebkitEndPoint
-    background-image -webkit-gradient(linear, deprecatedWebkitStartPoint, deprecatedWebkitEndPoint, color-stop(startInterval, startColor), color-stop(endInterval, endColor))
-  background-image -webkit-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image -moz-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  
 *, *:after, *:before
   -webkit-box-sizing border-box
   -moz-box-sizing border-box
@@ -32,7 +21,7 @@ html, body, #intro
   width 100%
   
 body 
-  font-family myriad pro
+  font-family "myriad-pro", myriad-pro, sans-serif
   font-size 16px
   line-height 21px
   color #222
@@ -160,7 +149,6 @@ menu
   
 .global-lives-project 
   color white
-
     
 .menu-global-lives-project
   background linear-gradient(to right, rgba(0,0,0,1) 200px,rgba(0,0,0,0) 400px) !important
@@ -300,7 +288,7 @@ menu
 
 // ANIMATIONS 
 
-/*
+
 .animate.ng-animate
   -webkit-transition opacity 1s ease
   transition opacity 1s ease
@@ -314,7 +302,7 @@ menu
 .animate.ng-leave,
 .animate.ng-enter.ng-enter-active
   opacity 1
-  */
+
   
 [ui-view]
   height 100%
@@ -329,7 +317,7 @@ menu
 [ui-view].ng-enter,
 [ui-view].ng-leave
   transition-timing-function linear
-  transition-duration 200ms
+  transition-duration 300ms
   transition-property opacity
 
   
