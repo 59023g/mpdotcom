@@ -1,19 +1,14 @@
 {
-  "id": "global-lives-project",
+  "id": "samsung-galaxy-tab",
   "images": [
-    "images/projects/globalLives_digital.png"
+    "http://michaelepierce.com/assets/globalLives/web_20140102-04.jpg"
+
+
   ],
   "name": "Global Lives Project",
-  "copy": [
-    "Supported by the National Endowment for the Arts, The Global Lives Project curates a collection of films that captures 24 hours in the day of life from individuals around the world.",
-    " I was brought in to provide strategy for their 2013 fundraising campaign. Soon thereafter, I connected all their outgoing communications with Google Analytics. I then sent out weekly reports which served to help focus their efforts based on conversion rates. They raised 119% of their goal.",
-    "From the Executive Director: \"Michael arrived just at the right time and jumped into a high-pressure project with tight deadlines and figured out exactly where he could help. \""
-  ],
-  "tags": [
-    "Strategy",
-    "Google AdWords/Analytics",
-    "Graphic design per brand specification"
-  ],
   "url": "http://globalLives.org",
+  "copy": "orem Ipsum is simply dummy t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "layout": "top"
+
+
 }

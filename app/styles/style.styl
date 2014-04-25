@@ -3,17 +3,6 @@
 color-left = #FD500D
 color-right = #FF3535 
 
-
-background-linear-gradient(startPoint, startColor, startInterval, endColor, endInterval, deprecatedWebkitStartPoint = false, deprecatedWebkitEndPoint = false)
-  background-color startColor
-  if deprecatedWebkitStartPoint && deprecatedWebkitEndPoint
-    background-image -webkit-gradient(linear, deprecatedWebkitStartPoint, deprecatedWebkitEndPoint, color-stop(startInterval, startColor), color-stop(endInterval, endColor))
-  background-image -webkit-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image -moz-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-  
 *, *:after, *:before
   -webkit-box-sizing border-box
   -moz-box-sizing border-box
@@ -28,7 +17,7 @@ background-linear-gradient(startPoint, startColor, startInterval, endColor, endI
 html 
   overflow-x hidden
 html, body, #intro
-  //height 100%
+  height 101%
   width 100%
   
 body 
@@ -42,11 +31,7 @@ body
   //-o-transform translate3d(0,0,0)
   //transform translate3d(0,0,0)  
 
-a
-  text-decoration none
-  color #222
-  
-p, ul
+p 
   font-size 14px
   line-height 21px
   margin-bottom 14px
@@ -56,23 +41,13 @@ h2
   font-weight 600
   margin-bottom 7px
 
-i
-  cursor pointer
-  margin-right 10px
-  &:hover
-    color blue
-    -webkit-transition color .2s ease
-    -moz-transition color .2s ease
-    -ms-transition color .2s ease
-    -o-transition color .2s ease
-    transition color .2s ease 
 img
   width 100%
   height auto
   margin-bottom 20px
-  border-radius 2px
-  moz-border-radius 2px
-  webkit-border-radius 2px
+  border-radius 5px
+  webkit-border-radius 5px
+  moz-border-radius 5px
   box-shadow 0 2px 8px rgba(0, 0, 0, 0.15)
   
 .container 
@@ -81,16 +56,12 @@ img
 
 menu 
   position fixed
-  width auto
+  width 112px
   height 100%
   z-index 30
-  left 0px
+  left 100px
   top 50px
-  .top-menu 
-    padding 12px 0 12px 100px
-    //background linear-gradient(to right,#fff 200px,rgba(255,255,255,0) 400px)
-    //width 600px
-    //transition background 200ms linear
+
    
 #controls 
   position relative
@@ -134,8 +105,7 @@ menu
 
    
 
-// BACKGROUNDS & PROJECT SPECIFIC CSS
-.home-bg
+// BACKGROUNDS 
 .horizontal-gradient 
   background color-left
   background -moz-linear-gradient(left, color-left 0%, color-right 100%)
@@ -146,36 +116,22 @@ menu
   background linear-gradient(to right, color-left 0%, color-right 100%)
 
 .bg-global-lives-project
-  background-color #2b2b2b
-  color white
-  .cta 
-    &:hover
-      color #222
-  
-.bg-thingsthings 
-  background-color turquoise
-  .cta 
-    &:hover
-     color turquoise !important
-  
-.global-lives-project 
+  background black
   color white
 
-    
-.menu-global-lives-project
-  background linear-gradient(to right, rgba(0,0,0,1) 200px,rgba(0,0,0,0) 400px) !important
-  transition background 0ms linear
-  
+.global-lives-project 
+  color white
+  &:hover
+    color black !important
+
 .bg-pictage-inc
   background white
   color #222
   
-.bg-homme
-  background white
-.bg-home
+.bg-test
   background url('http://p.michaelepierce.com/img/feb%2017%20(9).JPG')
   background-size cover
-  opacity 1
+  opacity 0
   transition opacity .5s ease
   -o-transition opacity .5s ease
   -moz-transition opacity .5s ease
@@ -196,6 +152,10 @@ menu
   width 48px
   height 48px
   opacity 1
+  transition opacity .5s ease
+  -o-transition opacity .5s ease
+  -moz-transition opacity .5s ease
+  -webkit-transition opacity .5s ease
   &.fadeOut
     opacity 0
 
@@ -227,11 +187,24 @@ menu
     -o-transform rotateZ(360deg)
 
 ////// END LOADING SPINNER 
+
+.animate
+  transition opacity .7s ease
+  -o-transition opacity .7s ease
+  -moz-transition opacity .7s ease
+  -webkit-transition opacity .7s ease
+  
+.animate.ng-leave.ng-leave-active,
+.animate.ng-enter 
+  opacity 0
+  
+.animate.ng-leave,
+.animate.ng-enter.ng-enter-active
+  opacity 0 
+
 #intro
   position relative
-  height auto
-  min-height 100%
-  
+
 #intro-text
   color white
   width 300px
@@ -243,37 +216,45 @@ menu
 .intro-detail
   text-align justify
 
-#content
+#main 
   width 628px
   margin 0 auto
-  padding-top 162px
-  padding-bottom 100px
-
+  padding-top 150px
+  transition all .5s ease
+  -o-transition all .5s ease
+  -moz-transition all .5s ease
+  -webkit-transition all .5s ease
   
-#top
-  width 100%
-  height 262px
-  opacity 1 
-  transition opacity .5s ease
-  -o-transition opacity .5s ease
-  -moz-transition opacity .5s ease
-  -webkit-transition opacity .5s ease
- 
 #left 
   width 300px
   margin-right 21px
   float left 
   opacity 1
-  margin-top -8px
+  transition opacity .5s ease
+  -o-transition opacity .5s ease
+  -moz-transition opacity .5s ease
+  -webkit-transition opacity .5s ease
 
+.side 
+  width 300px
+  
+.top 
+  width 100%
 
+#top
+  width 100%
+  height auto
+  opacity 1 
+  transition opacity .5s ease
+  -o-transition opacity .5s ease
+  -moz-transition opacity .5s ease
+  -webkit-transition opacity .5s ease
+    
 #right
   width 300px
-  margin-left 333px
+  margin-left 321px
   position fixed
   
-  
-
 .project
   padding 250px 0
 
@@ -281,17 +262,17 @@ menu
   cursor pointer
   width 100px
   height 36px
-  border 3px solid #0000ff
+  border 3px solid #00ff00
   border-radius 5px
-  color #0000ff
-  padding 6px 32px 5px 32px    
+  color #0F0
+  padding 6px 32px    
   transition all .2s ease
   -o-transition all .2s ease
   -moz-transition all .2s ease
   -webkit-transition all .2s ease     
   &:hover
     color white
-    background-color #00f
+    background-color #0F0
     transition all .2s ease
     -o-transition all .2s ease
     -moz-transition all .2s ease
@@ -299,23 +280,6 @@ menu
 
 
 // ANIMATIONS 
-
-/*
-.animate.ng-animate
-  -webkit-transition opacity 1s ease
-  transition opacity 1s ease
-
-
-
-.animate.ng-leave.ng-leave-active,
-.animate.ng-enter
-  opacity 0
-
-.animate.ng-leave,
-.animate.ng-enter.ng-enter-active
-  opacity 1
-  */
-  
 [ui-view]
   height 100%
   position absolute
@@ -328,11 +292,10 @@ menu
   
 [ui-view].ng-enter,
 [ui-view].ng-leave
-  transition-timing-function linear
-  transition-duration 200ms
+  transition-timing-function ease
+  transition-duration 500ms
   transition-property opacity
 
-  
 [ui-view].ng-enter
   opacity 0
   &.ng-enter-active

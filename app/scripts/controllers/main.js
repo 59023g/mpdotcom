@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('mpApp')
-  .controller('MainCtrl', ['$scope', '$stateParams', '$state', 'Projects', 'preloader', '$timeout',
-    function($scope, $stateParams, $state, Projects, preloader, $timeout) {
+  .controller('MainCtrl', ['$scope', '$stateParams', '$state', 'Projects', 'preloader',
+    function($scope, $stateParams, $state, Projects, preloader) {
+      //console.log($rootScope);
 
-      console.log($stateParams.project);
+      //console.log($stateParams.project);
 
       //GET specific project based on stateparams 
       Projects.get({
@@ -27,32 +28,34 @@ angular.module('mpApp')
               // --
               // NOTE: "cache" attribute is to prevent images from caching in the
               // browser (for the sake of the demo).
-              $scope.imageLocations = $scope.images;
+              $scope.imageLocations = $scope.images
 
               // Preload the images; then, update display when returned.
               preloader.preloadImages($scope.imageLocations).then(
-                function handleResolve() {
+                function handleResolve(imageLocations) {
 
-                  function imageLoad() {
-                    $scope.isLoading = false;
-                    $scope.isSuccessful = true;
-                  }
+                  // Loading was successful.
+                  $scope.isLoading = false;
+                  $scope.isSuccessful = true;
 
-                  $timeout(imageLoad, 250);
-                  console.info('Preload Successful');
+                  console.info("Preload Successful");
 
                 },
-                function handleReject() {
+                function handleReject(imageLocation) {
 
                   // Loading failed on at least one image.
                   $scope.isLoading = false;
                   $scope.isSuccessful = false;
+
+                  console.error("Image Failed", imageLocation);
+                  console.info("Preload Failure");
+
                 },
                 function handleNotify(event) {
 
                   $scope.percentLoaded = event.percent;
 
-                  console.info('Percent loaded:', event.percent);
+                  console.info("Percent loaded:", event.percent);
 
                 }
               );
@@ -68,6 +71,15 @@ angular.module('mpApp')
           }
       );
 
+
+
+
+
+
+
+
+
+      //inite();
 
 
 

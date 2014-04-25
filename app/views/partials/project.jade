@@ -1,40 +1,40 @@
-main#intro(class="bg-{{ $stateParams.project }}")
-  section#content
+section#intro(class="bg-{{ $stateParams.project }}")
+  #main
     #top(ng-show="project.layout === 'top'")
-      
-      .images(ng-switch="isLoading")
-        
+      div(ng-switch="isLoading")
         #spinnerWrap(ng-switch-when="true")
           #spinner
-
-        .animate(ng-switch-when="false" ng-switch="isSuccessful")
+          span(style="text-align: center; position: absolute; left:16px; top: 14px")
+        div(ng-switch-when="false" ng-switch="isSuccessful" class="animate")
           p(ng-switch-when="true" )
             img(ng-repeat="src in imageLocations" ng-src="{{ src }}" )
           p(ng-switch-when="false")
-            | Error loading
+            | POOPS
     #left
-      .images(ng-switch="isLoading" ng-hide="project.layout === 'top'")
-        
+      .nativeLeft(ng-switch="isLoading" ng-hide="project.layout === 'top'")
         #spinnerWrap(ng-switch-when="true")
           #spinner
-        
-        .animate(ng-switch-when="false" ng-switch="isSuccessful")
+          span(style="text-align: center; position: absolute; left:16px; top: 14px") 
+        div(ng-switch-when="false" ng-switch="isSuccessful" class="animate")
           p(ng-switch-when="true" )
             img(ng-repeat="src in imageLocations" ng-src="{{ src }}"  )
           p(ng-switch-when="false")
             | POOPS
-      
       div(ng-show="project.layout === 'top'")
         h2 {{ project.name }}
-        p(ng-repeat="copy in project.copy") {{ copy }}
-        ul
-          li(ng-repeat="tag in project.tags") {{ tag }}
+        p {{ project.copy }}
     #right 
       div(ng-hide="project.layout === 'top'")
         h2 {{ project.name }}
-        p(ng-repeat="copy in project.copy") {{ copy }}
-        ul
-          li(ng-repeat="tag in project.tags") {{ tag }}
-      a.cta(class="{{ $stateParams.project }}" href=" {{ project.url }} " target="_blank") Visit
-    div(style="clear:both")
+        p {{ project.copy }}
+      div(class="{{ $stateParams.project }} cta ") Visit
+ui-view.project
 
+
+    
+//-aside#controls
+  a(ui-sref='/')
+    div.navigate-left.enabled
+  div.navigate-right
+  div.navigate-up
+  div.navigate-down

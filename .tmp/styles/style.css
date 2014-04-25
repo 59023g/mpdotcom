@@ -20,6 +20,7 @@ html {
 html,
 body,
 #intro {
+  height: 101%;
   width: 100%;
 }
 
@@ -30,13 +31,7 @@ body {
   color: #222;
 }
 
-a {
-  text-decoration: none;
-  color: #222;
-}
-
-p,
-ul {
+p {
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 14px;
@@ -48,23 +43,13 @@ h2 {
   margin-bottom: 7px;
 }
 
-i {
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-i:hover {
-  color: #00f;
-  transition: color .2s ease;
-}
-
 img {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 2px;
-  moz-border-radius: 2px;
-  webkit-border-radius: 2px;
+  border-radius: 5px;
+  webkit-border-radius: 5px;
+  moz-border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
@@ -75,15 +60,11 @@ img {
 
 menu {
   position: fixed;
-  width: auto;
+  width: 112px;
   height: 100%;
   z-index: 30;
-  left: 0;
+  left: 100px;
   top: 50px;
-}
-
-menu .top-menu {
-  padding: 12px 0 12px 100px;
 }
 
 #controls {
@@ -123,36 +104,22 @@ menu .top-menu {
   transition: all .2s ease;
 }
 
-.home-bg,
 .horizontal-gradient {
   background: #fd500d;
   background: linear-gradient(to right,#fd500d 0%,#ff3535 100%);
 }
 
 .bg-global-lives-project {
-  background-color: #2b2b2b;
+  background: #000;
   color: #fff;
-}
-
-.bg-global-lives-project .cta:hover {
-  color: #222;
-}
-
-.bg-thingsthings {
-  background-color: #40e0d0;
-}
-
-.bg-thingsthings .cta:hover {
-  color: #40e0d0 !important;
 }
 
 .global-lives-project {
   color: #fff;
 }
 
-.menu-global-lives-project {
-  background: linear-gradient(to right,#000 200px,rgba(0,0,0,0) 400px) !important;
-  transition: background 0ms linear;
+.global-lives-project:hover {
+  color: #000 !important;
 }
 
 .bg-pictage-inc {
@@ -160,12 +127,8 @@ menu .top-menu {
   color: #222;
 }
 
-.bg-homme {
-  background: #fff;
-}
-
-.bg-home {
-  background: url("http://p.michaelepierce.com/img/feb%2017%20(9).JPG");background-size:cover;opacity:1;transition:opacity .5s ease;-o-transition:opacity .5s ease;-moz-transition:opacity .5s ease;-webkit-transition:opacity .5s ease}#spinnerWrap,#intro-text{position:absolute;left:50%;top:50%;z-index:99}#spinnerWrap{left:100px;top:250px;width:48px;height:48px;opacity:1;}#spinnerWrap.fadeOut{opacity:0}#spinner{position:relative;width:48px;height:48px;display:block;background-image:url("http://michaelepierce.com/out/spinner@2x_red.png");
+.bg-test {
+  background: url("http://p.michaelepierce.com/img/feb%2017%20(9).JPG");background-size:cover;opacity:0;transition:opacity .5s ease;-o-transition:opacity .5s ease;-moz-transition:opacity .5s ease;-webkit-transition:opacity .5s ease}#spinnerWrap,#intro-text{position:absolute;left:50%;top:50%;z-index:99}#spinnerWrap{left:100px;top:250px;width:48px;height:48px;opacity:1;transition:opacity .5s ease;-o-transition:opacity .5s ease;-moz-transition:opacity .5s ease;-webkit-transition:opacity .5s ease;}#spinnerWrap.fadeOut{opacity:0}#spinner{position:relative;width:48px;height:48px;display:block;background-image:url("http://michaelepierce.com/out/spinner@2x_red.png");
   background-size: 48px 48px;
   -webkit-animation-name: spin;
   -webkit-animation-duration: .8s;
@@ -179,10 +142,22 @@ menu .top-menu {
   -moz-animation-timing-function: linear;
 }
 
+.animate {
+  transition: opacity .7s ease;
+}
+
+.animate.ng-leave.ng-leave-active,
+.animate.ng-enter {
+  opacity: 0;
+}
+
+.animate.ng-leave,
+.animate.ng-enter.ng-enter-active {
+  opacity: 0;
+}
+
 #intro {
   position: relative;
-  height: auto;
-  min-height: 100%;
 }
 
 #intro-text {
@@ -198,18 +173,11 @@ menu .top-menu {
   text-align: justify;
 }
 
-#content {
+#main {
   width: 628px;
   margin: 0 auto;
-  padding-top: 162px;
-  padding-bottom: 100px;
-}
-
-#top {
-  width: 100%;
-  height: 262px;
-  opacity: 1;
-  transition: opacity .5s ease;
+  padding-top: 150px;
+  transition: all .5s ease;
 }
 
 #left {
@@ -217,12 +185,27 @@ menu .top-menu {
   margin-right: 21px;
   float: left;
   opacity: 1;
-  margin-top: -8px;
+  transition: opacity .5s ease;
+}
+
+.side {
+  width: 300px;
+}
+
+.top {
+  width: 100%;
+}
+
+#top {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: opacity .5s ease;
 }
 
 #right {
   width: 300px;
-  margin-left: 333px;
+  margin-left: 321px;
   position: fixed;
 }
 
@@ -234,31 +217,17 @@ menu .top-menu {
   cursor: pointer;
   width: 100px;
   height: 36px;
-  border: 3px solid #00f;
+  border: 3px solid #0f0;
   border-radius: 5px;
-  color: #00f;
-  padding: 6px 32px 5px 32px;
+  color: #0f0;
+  padding: 6px 32px;
   transition: all .2s ease;
 }
 
 .cta:hover {
   color: #fff;
-  background-color: #00f;
+  background-color: #0f0;
   transition: all .2s ease;
-}
-
-.animate.ng-animate {
-  transition: opacity 1s ease;
-}
-
-.animate.ng-leave.ng-leave-active,
-.animate.ng-enter {
-  opacity: 0;
-}
-
-.animate.ng-leave,
-.animate.ng-enter.ng-enter-active {
-  opacity: 1;
 }
 
 [ui-view] {
@@ -275,8 +244,8 @@ menu .top-menu {
 
 [ui-view].ng-enter,
 [ui-view].ng-leave {
-  transition-timing-function: linear;
-  transition-duration: 200ms;
+  transition-timing-function: ease;
+  transition-duration: 500ms;
   transition-property: opacity;
 }
 

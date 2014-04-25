@@ -42,7 +42,7 @@ angular.module('mpApp')
 
 
       // I reload the given images [Array] and return a promise. The promise
-      // will be resolved with the array of image locations. 111111
+      // will be resolved with the array of image locations.
       Preloader.preloadImages = function(imageLocations) {
 
         var preloader = new Preloader(imageLocations);
@@ -92,7 +92,7 @@ angular.module('mpApp')
         },
 
 
-        // I initiate the preload of the images. Returns a promise.  222
+        // I initiate the preload of the images. Returns a promise.
         load: function load() {
 
           // If the images are already loading, return the existing promise.
@@ -156,7 +156,7 @@ angular.module('mpApp')
           // than Resolving the deferred - you can call notify many times
           // before the ultimate resolution (or rejection) of the deferred.
           this.deferred.notify({
-            percent: Math.ceil(this.loadCount / this.imageCount * 100),
+            percent: Math.ceil(this.loadCount / (this.imageCount-.5) * 100),
             imageLocation: imageLocation
           });
 
@@ -176,7 +176,7 @@ angular.module('mpApp')
         // I load the given image location and then wire the load / error
         // events back into the preloader instance.
         // --
-        // NOTE: The load/error events trigger a $digest. 333
+        // NOTE: The load/error events trigger a $digest.
         loadImageLocation: function loadImageLocation(imageLocation) {
 
           var preloader = this;

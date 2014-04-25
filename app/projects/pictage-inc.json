@@ -1,19 +1,15 @@
 {
-  "id": "pictage-inc",
+  "id": "samsung-galaxy-tab",
   "images": [
-    "images/projects/pictage_email.png",
-    "images/projects/pictage_salesSite2.png",
-    "images/projects/pictage_structure.png"
+    "images/projects/pictageEmail_michaelPierce_sml.png",
+    "http://michaelepierce.com/assets/pictage/20130301_features-layout-mp.jpg",
+    "http://michaelepierce.com/assets/pictage/salesSite.jpg",
+    "http://michaelepierce.com/assets/pictage/microsite.jpg"
+
+
   ],
   "name": "Pictage, Inc",
-  "copy": ["Pictage is a SaaS provider and print lab for professional photographers. I supported the Marketing team."],
-  "tags": [
-    "Email design, develop, and test.",
-    "Sales website design and develop.",
-    "Designed digital banner advertisements.",
-    "Competitive analysis."
-  ],
-  "url": "http://discover.pictage.com",
+  "copy": "orem Ipsum is simply dummy text of the printing and a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "layout": "side"
 
 }

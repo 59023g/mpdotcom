@@ -17,15 +17,15 @@ module.exports = function(grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-    throttle: {
+    /*throttle: {
         default: {
             remote_port: 9000,
             local_port: 9001,
             upstream: 10*1024,
-            downstream: 100*2048,
+            downstream: 100*1024,
             keepalive: true
         }
-    },
+    },*/
 
     // Project settings
     yeoman: {
@@ -226,7 +226,7 @@ module.exports = function(grunt) {
           src: [
             '<%= yeoman.dist %>/public/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/public/styles/{,*/}*.css',
-            //'<%= yeoman.dist %>/public/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.dist %>/public/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/styles/fonts/*'
           ]
         }
@@ -328,17 +328,9 @@ module.exports = function(grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            //'images/{,*/}*.{webp}',
-            'fonts/**/*',
-            'projects/**',
-            'images/**/*.jpg',
-
+            'images/{,*/}*.{webp}',
+            'fonts/**/*'
           ]
-        }, {
-          expand: true,
-          cwd: '<%= yeoman.app %>/bower_components/ionicons',
-          dest: '<%= yeoman.dist %>/public',
-          src: 'fonts/*'
         }, {
           expand: true,
           dot: true,
@@ -347,9 +339,9 @@ module.exports = function(grunt) {
           src: '**/*.jade'
         }, {
           expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '**/*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/public/images'
+          cwd: '.tmp/images',
+          dest: '<%= yeoman.dist %>/public/images',
+          src: ['generated/*']
         }, {
           expand: true,
           dest: '<%= yeoman.dist %>',
@@ -387,7 +379,7 @@ module.exports = function(grunt) {
       },
       dist: [
         'copy:styles',
-        //'imagemin',
+        'imagemin',
         'svgmin',
         'htmlmin'
       ]
@@ -459,7 +451,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'express:prod', 'express-keepalive']);
+      return grunt.task.run(['build', 'express:prod', 'open', 'express-keepalive']);
     }
 
     if (target === 'debug') {
@@ -478,8 +470,8 @@ module.exports = function(grunt) {
       'concurrent:server',
       'autoprefixer',
       'express:dev',
-      //'open',
-      'throttle',
+      'open',
+      //'throttle',
       'watch'
     ]);
   });
