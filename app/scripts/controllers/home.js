@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('mpApp')
-  .controller('HomeCtrl', ['preloader', '$timeout', '$scope',
-    function(preloader, $timeout, $scope) {
+  .controller('HomeCtrl', ['$scope', 'preloader', '$timeout',
+    function($scope, preloader, $timeout) {
 
       // I keep track of the state of the loading images.
       $scope.isLoading = true;
       $scope.isSuccessful = false;
       $scope.percentLoaded = 0;
-      
+
       var bgImg = {
         images: ['images/projects/bg.png']
       };

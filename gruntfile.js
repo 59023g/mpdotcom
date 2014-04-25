@@ -17,15 +17,15 @@ module.exports = function(grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-    /*throttle: {
+    throttle: {
         default: {
             remote_port: 9000,
             local_port: 9001,
             upstream: 10*1024,
-            downstream: 100*1024,
+            downstream: 100*2048,
             keepalive: true
         }
-    },*/
+    },
 
     // Project settings
     yeoman: {
@@ -479,7 +479,7 @@ module.exports = function(grunt) {
       'autoprefixer',
       'express:dev',
       //'open',
-      //'throttle',
+      'throttle',
       'watch'
     ]);
   });
