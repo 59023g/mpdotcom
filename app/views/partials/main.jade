@@ -3,7 +3,7 @@
   #spinnerWrap(ng-switch-when="true")
     #spinner
   
-  .animate(ng-switch-when="false" ng-switch="isSuccessful")
+  div(ng-switch-when="false" ng-switch="isSuccessful")
     div(ng-switch-when="true" style="width:100%;height:100%")
       div(ng-repeat="src in imageLocations" style="background: url('{{ src }}');background-size: cover;height:100%;width:100%;position:absolute"  )
     p(ng-switch-when="false")

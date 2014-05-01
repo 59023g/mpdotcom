@@ -1,5 +1,32 @@
 main#intro(class="bg-{{ $stateParams.project }}")
   section#content
+    #left(ng-switch="isLoading")
+
+      #spinnerWrap(ng-switch-when="true")
+        #spinner
+      
+      div(ng-switch-when="false" ng-switch="isSuccessful")
+        div(ng-switch-when="true" )
+          img(ng-repeat="src in imageLocations" ng-src="{{ src }}")
+        div(ng-switch-when="false")
+          | OOPS
+      
+      div(ng-show="project.layout === 'top'")
+        h2 {{ project.name }}
+        p(ng-repeat="copy in project.copy") {{ copy }}
+        ul
+          li(ng-repeat="tag in project.tags") {{ tag }}
+    #right 
+      div(ng-hide="project.layout === 'top'")
+        h2 {{ project.name }}
+        p(ng-repeat="copy in project.copy") {{ copy }}
+        ul
+          li(ng-repeat="tag in project.tags") {{ tag }}
+      a.cta(class="{{ $stateParams.project }}" href=" {{ project.url }} " target="_blank") Visit
+    div(style="clear:both")
+
+//-main#intro(class="bg-{{ $stateParams.project }}")
+  section#content
     #top(ng-show="project.layout === 'top'")
       
       .images(ng-switch="isLoading")
@@ -37,4 +64,3 @@ main#intro(class="bg-{{ $stateParams.project }}")
           li(ng-repeat="tag in project.tags") {{ tag }}
       a.cta(class="{{ $stateParams.project }}" href=" {{ project.url }} " target="_blank") Visit
     div(style="clear:both")
-

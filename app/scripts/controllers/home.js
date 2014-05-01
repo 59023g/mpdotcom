@@ -32,7 +32,7 @@ angular.module('mpApp')
             $scope.isSuccessful = true;
           }
 
-          $timeout(imageLoad, 250);
+          $timeout(imageLoad, 0);
           console.info('Preload Successful');
 
         },

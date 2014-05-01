@@ -262,7 +262,7 @@ menu .top-menu {
 [ui-view].ng-enter,
 [ui-view].ng-leave {
   transition-timing-function: linear;
-  transition-duration: 200ms;
+  transition-duration: 300ms;
   transition-property: opacity;
 }
 
