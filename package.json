@@ -11,6 +11,8 @@
     "socket.io": "*"
   },
   "devDependencies": {
+    "grunt-cli": "latest",
+    "bower": "latest",
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-bower-install": "~0.7.0",
