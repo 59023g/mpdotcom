@@ -177,7 +177,7 @@ menu .sub-menu {
 }
 
 .bg-home {
-  background: url("http://p.michaelepierce.com/img/feb%2017%20(9).JPG");background-size:cover;opacity:1;transition:opacity .5s ease;-o-transition:opacity .5s ease;-moz-transition:opacity .5s ease;-webkit-transition:opacity .5s ease}#spinnerWrap,#intro-text{position:absolute;left:50%;top:50%;z-index:99}#spinnerWrap{left:100px;top:250px;width:48px;height:48px;opacity:1;}#spinnerWrap.fadeOut{opacity:0}#spinner{position:relative;width:48px;height:48px;display:block;background-image:url("http://michaelepierce.com/out/spinner@2x_red.png");
+  background: url("http://p.michaelepierce.com/img/feb%2017%20(9).JPG");background-size:cover;opacity:1;transition:opacity .5s ease;-o-transition:opacity .5s ease;-moz-transition:opacity .5s ease;-webkit-transition:opacity .5s ease}#spinnerWrap,#intro-text{position:absolute;left:50%;top:50%;z-index:99}#spinnerWrap{left:100px;top:250px;width:48px;height:48px;opacity:1;}#spinnerWrap.fadeOut{opacity:0}#spinner{position:relative;width:48px;height:48px;display:block;background-image:url("http://michaelepierce.info/images/spinner@2x_red.png");
   background-size: 48px 48px;
   -webkit-animation-name: spin;
   -webkit-animation-duration: .8s;
