@@ -6,19 +6,17 @@ angular.module('mpApp')
 
       console.log($stateParams.project);
 
-      //GET specific project based on stateparams 
+      //GET specific project based on stateparams
       Projects.get({
         project: $stateParams.project
       })
         .$promise.then(
           function(data) {
             $scope.project = data;
-            //console.log(data);
+
             if ($scope.project.images) {
               $scope.images = $scope.project.images;
-              console.log($scope.images);
 
-              // I keep track of the state of the loading images.
               $scope.isLoading = true;
               $scope.isSuccessful = false;
               $scope.percentLoaded = 0;
