@@ -47,6 +47,7 @@ h2 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 7px;
+  letter-spacing: -1px;
 }
 
 i {
@@ -137,7 +138,7 @@ menu .sub-menu {
 }
 
 .home {
-  margin-left: 100px !important;
+  margin-left: 250px !important;
   padding-left: 0 !important;
 }
 
@@ -327,6 +328,10 @@ menu .sub-menu {
 }
 
 @media all and (max-width:640px) {
+  .home {
+    margin-left: 60px !important;
+  }
+
   #top {
     height: auto;
   }
