@@ -5,30 +5,26 @@
   
   div(ng-switch-when="false" ng-switch="isSuccessful")
     div(ng-switch-when="true" style="width:100%;height:100%")
-      div(ng-repeat="src in imageLocations" style="background: url('{{ src }}');background-size: cover;height:100%;width:100%;position:absolute"  )
+      div(ng-repeat="src in imageLocations" style="background: url('{{ src }}');background-size: cover;height:101%;width:100%;position:absolute;z-index:-999"  )
     p(ng-switch-when="false")
       | Error
 
-  div(style="position:fixed;top:82px;left:250px;width:200px;z-index:99999")
-    h2 Hello!
-    p The last four years I’ve worked with 24 local to medium-sized businesses, providing end-to-end service from sales to web production. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
-    p I built this site with Express 3, Angular 1.2, Mongo, Jade, Stylus, and Grunt. Deployed on Ubuntu 13.10 x64.    
-    p(style='margin-bottom:24px') The background photo is from Pfeiffer Beach, last month.
-    a.cta(class="{{ $stateParams.project }}" href="global-lives-project") Projects
-    main#intro()
+  #content.home(style="z-index:99999;width:auto;width:100%;")
+    #left(style="margin-top:0")
+      h2 Hello!
+      p The last four years I’ve worked with numerous local to medium-sized businesses. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
+      p I built this site with nginx, Express 3, Angular 1.2, Mongo, Jade, Stylus, and Grunt. Deployed on Ubuntu 14.04 x64.    
+      p(style='margin-bottom:24px') The background photo is from Pfeiffer Beach, last month.
+      a.cta(class="{{ $stateParams.project }}" href="global-lives-project") Projects
 
-      section#content(style="width:496px")
-        #top()
 
-        //-#left
-
-          //-img(src="images/projects/me_web.png" style="width:150px;float:right;box-shadow:none")
-        //-#right(style="margin-left:174px") 
-          div(ng-hide="$stateParams.project === 'global-lives-project'" style="color:#222;margin-bottom:36px")
-            h2 Hello!
-            p The last four years I’ve worked with local to medium-sized businesses, providing end-to-end service from sales to web production. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
-            p Graduated from UW - Madison with a BA in Marketing and Philosophy
-            p You can find me running up Twin Peaks, biking around the city, and learning front-end web technologies.
-            p I built this site with Express 3, Angular 1.2, Mongo, Jade, and Sylus. Deployed on Ubuntu 13.10 x64.
-          a.cta(style="margin-top:12px" class="{{ $stateParams.project }}" href="global-lives-project") Projects
-        div(style="clear:both") 
+            //-img(src="images/projects/me_web.png" style="width:150px;float:right;box-shadow:none")
+          //-#right(style="margin-left:174px") 
+            div(ng-hide="$stateParams.project === 'global-lives-project'" style="color:#222;margin-bottom:36px")
+              h2 Hello!
+              p The last four years I’ve worked with local to medium-sized businesses, providing end-to-end service from sales to web production. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
+              p Graduated from UW - Madison with a BA in Marketing and Philosophy
+              p You can find me running up Twin Peaks, biking around the city, and learning front-end web technologies.
+              p I built this site with Express 3, Angular 1.2, Mongo, Jade, and Sylus. Deployed on Ubuntu 13.10 x64.
+            a.cta(style="margin-top:12px" class="{{ $stateParams.project }}" href="global-lives-project") Projects
+          div(style="clear:both") 

@@ -20,7 +20,8 @@ html.no-js
         },
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
-    // Place favicon.ico and apple-touch-icon.png in the root directory
+    <link href="images/favicon.gif" rel="SHORTCUT ICON">
+
     <!-- build:css(app) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
@@ -48,7 +49,7 @@ html.no-js
       .top-menu
         a(ui-sref="/")
           h2(style='margin-bottom: 0' class=" {{ $stateParams.project }}") Michael E Pierce
-        p(class=" {{ $stateParams.project }}") Consulting
+        p(class=" {{ $stateParams.project }}") Web Design & Develop
         nav#controls
           a(ng-click="back()" ng-keydown="onKeydown" )
             #navigate-back
@@ -60,17 +61,17 @@ html.no-js
               svg(width="49" height="28" )
                 path(id="forward-bg"  fill="#e5e5e5" d="M45,0H0v28h45c2.2,0,4-1.8,4-4V4C49,1.8,47.2,0,45,0z M18.6,21V7l14.1,7L18.6,21z")
                 polygon(id="forward-tri" class="hidden" fill="#e5e5e5" points="18.6,21 32.7,14 18.6,7")  
-    p(style="bottom: 0;left:100px; position: fixed" class=" {{ $stateParams.project }}") 3322 26th Street <br>
-      | San Francisco, CA <br>
-      | 415 696 9339 <br>
-      a(href="http://twitter.com/mp1erce" target="_blank")
-        i(class="icon ion-social-twitter {{ $stateParams.project }}")
-      a(href="http://github.com/mp1erce" target="_blank") 
-        i(class="icon ion-social-github {{ $stateParams.project }}")
-      a(href="https://www.facebook.com/mepmepmep" target="_blank")
-        i(class="icon ion-social-facebook {{ $stateParams.project }}") 
-      a(href="http://linkedin.com/in/mepmep/" target="_blank")
-        i(class="icon ion-social-linkedin-outline {{ $stateParams.project }}") 
+      .sub-menu(class=" {{ $stateParams.project }}") 3322 26th Street <br>
+        | San Francisco, CA <br>
+        | 415 696 9339 <br>
+        a(href="http://twitter.com/mp1erce" target="_blank")
+          i(class="icon ion-social-twitter {{ $stateParams.project }}")
+        a(href="http://github.com/mp1erce" target="_blank") 
+          i(class="icon ion-social-github {{ $stateParams.project }}")
+        a(href="https://www.facebook.com/mepmepmep" target="_blank")
+          i(class="icon ion-social-facebook {{ $stateParams.project }}") 
+        a(href="http://linkedin.com/in/mepmep/" target="_blank")
+          i(class="icon ion-social-linkedin-outline {{ $stateParams.project }}") 
 
 
 

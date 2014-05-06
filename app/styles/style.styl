@@ -16,8 +16,9 @@ color-right = #FF3535
 
 html 
   overflow-x hidden
+  height 101%
 html, body, #intro
-  //height 100%
+  //height 101%
   width 100%
   
 body 
@@ -41,7 +42,7 @@ p, ul
   margin-bottom 14px
    
 h2 
-  font-size 16px
+  font-size 18px
   font-weight 600
   margin-bottom 7px
 
@@ -74,13 +75,17 @@ menu
   height 100%
   z-index 30
   left 0px
-  top 50px
+  top 0px
   .top-menu 
-    padding 12px 0 12px 100px
+    padding 62px 12px 12px 100px
     //background linear-gradient(to right,#fff 200px,rgba(255,255,255,0) 400px)
     //width 600px
     //transition background 200ms linear
-   
+  .sub-menu
+    bottom 12px
+    left 100px
+    position fixed
+    
 #controls 
   position relative
   width 100px //109
@@ -134,8 +139,12 @@ menu
   background -ms-linear-gradient(left, color-left 0%, color-right 100%)
   background linear-gradient(to right, color-left 0%, color-right 100%)
 
+.home 
+  margin-left 100px !important
+  padding-left 0 !important 
+
 .bg-global-lives-project
-  background-color #2b2b2b
+  background-color #949494
   color white
   .cta 
     &:hover
@@ -192,7 +201,7 @@ menu
   width 48px
   height 48px
   display block
-  background-image url('http://michaelepierce.com/out/spinner@2x_red.png')
+  background-image url('http://michaelepierce.info/images/spinner@2x_red.png')
   background-size 48px 48px
   -webkit-animation-name spin
   -webkit-animation-duration .8s
@@ -256,8 +265,9 @@ menu
 
 
 #right
-  width 300px
+  max-width 300px
   margin-left 333px
+  margin-right 12px
   position fixed
   
   
@@ -272,7 +282,7 @@ menu
   border 3px solid #0000ff
   border-radius 5px
   color #0000ff
-  padding 6px 32px 5px 32px    
+  padding 6px 32px 6px 32px    
   transition all .2s ease
   -o-transition all .2s ease
   -moz-transition all .2s ease
@@ -288,10 +298,10 @@ menu
 
 // ANIMATIONS 
 
-/*
+
 .animate.ng-animate
-  -webkit-transition opacity 300ms ease
-  transition opacity 300ms ease
+  -webkit-transition opacity 1s ease
+  transition opacity 1s ease
 
 
 
@@ -302,7 +312,7 @@ menu
 .animate.ng-leave,
 .animate.ng-enter.ng-enter-active
   opacity 1
-*/
+
   
 [ui-view]
   height 100%
@@ -331,8 +341,36 @@ menu
   &.ng-leave-active
     opacity 0
 
+// MOBILE 
 
-//////
+
+// Everything less than 1140 
+@media all and (max-width: 1140px) 
+  menu 
+    width 100%
+    height auto
+    .top-menu
+      padding 62px 12px 12px 6px
+      margin-left 52%
+    .sub-menu
+      margin-left 52%
+      left 0
+      
+@media all and (max-width: 640px) 
+  #top
+    height auto
+  #content 
+    width 100%
+    padding-left 6px
+    padding-right 6px
+  #left
+    width 47%
+  #right
+    max-width 47%
+    margin-left 52% 
+      
+  
+/////
 /*
 [ui-view].ng-enter, [ui-view].ng-leave
   position absolute
