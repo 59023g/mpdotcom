@@ -5,15 +5,17 @@
   
   div(ng-switch-when="false" ng-switch="isSuccessful")
     div(ng-switch-when="true" style="width:100%;height:100%")
-      div(ng-repeat="src in imageLocations" style="background: url('{{ src }}');background-size: cover;height:101%;width:100%;position:absolute;z-index:-999"  )
+      div(ng-repeat="src in imageLocations" style="background: url('{{ src }}');background-size: cover;height:100%;width:100%;position:absolute;z-index:-999"  )
     p(ng-switch-when="false")
       | Error
 
   #content.home(style="z-index:99999;width:auto;width:100%;")
     #left(style="margin-top:0")
       h2 Hello!
-      p The last four years I’ve worked with local to medium-sized businesses. During that time I've produced marketing, design, and web development. In all endeavors I aim to find consensus and ensure stakeholder satisfaction.
-      p I built this site with nginx, Express 3, Angular 1.2, Mongo, Jade, Stylus, and Grunt. Deployed on Ubuntu 14.04 x64.    
+      p Excited to build upon rather than over. I warmly invite you to thumb through the following select project pages. Also, check out the 
+        a(ui-sref="about") about
+        |  page for more information about me.
+      p I built this site with nginx, Express 3, Angular 1.2, Mongo, Jade, Stylus, and Grunt. Deployed on Ubuntu 14.04 x64 through Digital Ocean.    
       p(style='margin-bottom:24px') The background photo is from Pfeiffer Beach, last month.
       a.cta(class="{{ $stateParams.project }}" href="global-lives-project") Projects
 
@@ -27,4 +29,5 @@
               p You can find me running up Twin Peaks, biking around the city, and learning front-end web technologies.
               p I built this site with Express 3, Angular 1.2, Mongo, Jade, and Sylus. Deployed on Ubuntu 13.10 x64.
             a.cta(style="margin-top:12px" class="{{ $stateParams.project }}" href="global-lives-project") Projects
+            The last four years I’ve worked with local to medium-sized businesses. During that time I've produced marketing, design, and web development.
           div(style="clear:both") 

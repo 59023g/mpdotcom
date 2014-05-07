@@ -15,7 +15,6 @@
 
 html {
   overflow-x: hidden;
-  height: 101%;
 }
 
 html,
@@ -34,6 +33,7 @@ body {
 a {
   text-decoration: none;
   color: #222;
+  border-bottom: 1px solid;
 }
 
 p,
@@ -89,9 +89,14 @@ menu .top-menu {
 }
 
 menu .sub-menu {
+  font-size: 14px;
   bottom: 12px;
   left: 100px;
   position: fixed;
+}
+
+menu .sub-menu a.social {
+  border-bottom: none;
 }
 
 #controls {
@@ -142,13 +147,17 @@ menu .sub-menu {
   padding-left: 0 !important;
 }
 
+.about {
+  background-color: #ffd700;
+}
+
 .bg-global-lives-project {
   background-color: #949494;
   color: #fff;
 }
 
 .bg-global-lives-project .cta:hover {
-  color: #222;
+  color: #949494;
 }
 
 .bg-thingsthings {
@@ -324,6 +333,12 @@ menu .sub-menu {
   menu .sub-menu {
     margin-left: 52%;
     left: 0;
+  }
+
+  .about-div {
+    margin: 0;
+    width: 50%;
+    padding: 162px 0 100px 24px;
   }
 }
 

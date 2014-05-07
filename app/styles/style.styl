@@ -16,7 +16,7 @@ color-right = #FF3535
 
 html 
   overflow-x hidden
-  height 101%
+  //height 101%
 html, body, #intro
   //height 101%
   width 100%
@@ -35,6 +35,7 @@ body
 a
   text-decoration none
   color #222
+  border-bottom 1px solid
   
 p, ul
   font-size 14px
@@ -83,9 +84,12 @@ menu
     //width 600px
     //transition background 200ms linear
   .sub-menu
+    font-size 14px
     bottom 12px
     left 100px
     position fixed
+    a.social
+      border-bottom none
     
 #controls 
   position relative
@@ -144,12 +148,14 @@ menu
   margin-left 250px !important
   padding-left 0 !important 
 
+.about 
+  background-color gold
 .bg-global-lives-project
   background-color #949494
   color white
   .cta 
     &:hover
-      color #222
+      color #949494
   
 .bg-thingsthings 
   background-color turquoise
@@ -356,6 +362,10 @@ menu
     .sub-menu
       margin-left 52%
       left 0
+  .about-div
+    margin 0
+    width 50%
+    padding 162px 0 100px 24px
       
 @media all and (max-width: 640px) 
   .home 
