@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('mpApp')
-  .controller('AboutCtrl', function() {
-});
+  .controller('AboutCtrl', ['$scope', function($scope) {
+}
+]);
