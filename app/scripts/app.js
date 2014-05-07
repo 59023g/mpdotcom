@@ -103,6 +103,12 @@ angular.module('mpApp', [
       templateUrl: 'partials/main',
       controller: 'HomeCtrl'
     })
+    .state('about', {
+      url: '^/about',
+      templateUrl: 'partials/about',
+      controller: 'AboutCtrl'
+
+    })
     .state('project', {
       url: '/:project',
       templateUrl: 'partials/project',
@@ -113,6 +119,7 @@ angular.module('mpApp', [
       templateUrl: 'partials/detail',
 
     });
+
 
   $locationProvider.html5Mode(true);
 });
