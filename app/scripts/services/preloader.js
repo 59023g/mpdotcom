@@ -2,7 +2,7 @@
 
 angular.module('mpApp')
   .factory(
-    "preloader",
+    'preloader',
     function($q, $rootScope) {
 
       // I manage the preloading of image objects. Accepts an array of image URLs.
@@ -185,46 +185,43 @@ angular.module('mpApp')
           // we bind the event handlers BEFORE we actually set the image
           // source. Failure to do so will prevent the events from proper
           // triggering in some browsers.
-          var image = $(new Image())
-            .load(
-              function(event) {
+          var image = angular.element(new Image())
+            .bind('load', function(event) {
 
-                // Since the load event is asynchronous, we have to
-                // tell AngularJS that something changed.
-                $rootScope.$apply(
-                  function() {
+              // Since the load event is asynchronous, we have to
+              // tell AngularJS that something changed.
+              $rootScope.$apply(
+                function() {
 
-                    preloader.handleImageLoad(event.target.src);
+                  preloader.handleImageLoad(event.target.src);
 
-                    // Clean up object reference to help with the
-                    // garbage collection in the closure.
-                    preloader = image = event = null;
+                  // Clean up object reference to help with the
+                  // garbage collection in the closure.
+                  preloader = image = event = null;
 
-                  }
-                );
+                }
+              );
 
-              }
-          )
-            .error(
-              function(event) {
+            })
+            .bind('error', function(event) {
 
-                // Since the load event is asynchronous, we have to
-                // tell AngularJS that something changed.
-                $rootScope.$apply(
-                  function() {
+              // Since the load event is asynchronous, we have to
+              // tell AngularJS that something changed.
+              $rootScope.$apply(
+                function() {
 
-                    preloader.handleImageError(event.target.src);
+                  preloader.handleImageError(event.target.src);
 
-                    // Clean up object reference to help with the
-                    // garbage collection in the closure.
-                    preloader = image = event = null;
+                  // Clean up object reference to help with the
+                  // garbage collection in the closure.
+                  preloader = image = event = null;
 
-                  }
-                );
+                }
+              );
 
-              }
-          )
-            .prop("src", imageLocation);
+            })
+            .attr('src', imageLocation);
+
 
         }
 
