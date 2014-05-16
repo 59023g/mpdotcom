@@ -78,7 +78,7 @@ angular.module('mpApp', [
       normalized = path.toLowerCase();
 
     if (path !== normalized) {
-      return normalized
+      return normalized;
     }
   });
 
@@ -92,7 +92,7 @@ angular.module('mpApp', [
     .state('about', {
       url: '^/about',
       templateUrl: 'partials/about',
-      controller: 'AboutCtrl'
+      controller: 'MainCtrl'
 
     })
     .state('project', {
