@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('mpApp')
-  .controller('HomeCtrl', ['$scope', 'preloader', '$timeout',
-    function($scope, preloader, $timeout) {
+  .controller('HomeCtrl', ['$scope', 
+    function($scope) {
 
+      console.log($scope);
       // I keep track of the state of the loading images.
-      $scope.isLoading = true;
+      /*$scope.isLoading = true;
       $scope.isSuccessful = false;
       $scope.percentLoaded = 0;
 
@@ -49,7 +50,7 @@ angular.module('mpApp')
           console.info('Percent loaded:', event.percent);
 
         }
-      );
+      );*/
 
 
 
