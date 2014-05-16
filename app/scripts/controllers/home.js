@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mpApp')
-  .controller('HomeCtrl', ['$scope', 
+  .controller('HomeCtrl', ['$scope',
     function($scope) {
 
       console.log($scope);
