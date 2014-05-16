@@ -5,8 +5,23 @@ angular.module('mpApp')
     function($scope) {
 
       console.log($scope);
-      // I keep track of the state of the loading images.
-      /*$scope.isLoading = true;
+      var img = document.querySelector('img');
+      img.addListener('load', loaded);
+
+      console.log(img);
+
+      var loaded = function() {
+        console.log(img);
+      }
+
+
+
+    }
+  ]);
+
+
+// I keep track of the state of the loading images.
+/*$scope.isLoading = true;
       $scope.isSuccessful = false;
       $scope.percentLoaded = 0;
 
@@ -51,10 +66,3 @@ angular.module('mpApp')
 
         }
       );*/
-
-
-
-
-
-    }
-  ]);
