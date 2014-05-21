@@ -1,23 +1,11 @@
 'use strict';
 
 angular.module('mpApp')
-  .controller('HomeCtrl', ['$scope',
-    function($scope) {
-
-      console.log($scope);
-      var img = document.querySelector('img');
-      img.addListener('load', loaded);
-
-      console.log(img);
-
-      var loaded = function() {
-        console.log(img);
-      }
+  .controller('HomeCtrl', 
+    function() {
 
 
-
-    }
-  ]);
+  });
 
 
 // I keep track of the state of the loading images.
