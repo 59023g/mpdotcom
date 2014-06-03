@@ -27,7 +27,7 @@ body {
   font-family: "myriad-pro",myriad-pro,sans-serif;
   font-size: 16px;
   line-height: 21px;
-  color: #222;
+  color: #333;
 }
 
 a {
@@ -156,12 +156,16 @@ menu .sub-menu a.social {
 }
 
 .bg-global-lives-project {
-  background-color: #949494;
-  color: #fff;
+  background-color: #42c3ec;
+  color: #eee;
 }
 
 .bg-global-lives-project .cta:hover {
-  color: #949494;
+  color: #fff;
+}
+
+.bg-orpheum {
+  background-color: #aae6ff;
 }
 
 .bg-thingsthings {
@@ -169,7 +173,7 @@ menu .sub-menu a.social {
 }
 
 .bg-thingsthings .cta:hover {
-  color: #40e0d0 !important;
+  color: #fff;
 }
 
 .global-lives-project {
@@ -182,7 +186,7 @@ menu .sub-menu a.social {
 }
 
 .bg-pictage-inc {
-  background: #fff;
+  background: #90dbff;
   color: #222;
 }
 
@@ -261,16 +265,17 @@ menu .sub-menu a.social {
   cursor: pointer;
   width: 100px;
   height: 36px;
-  border: 3px solid #00f;
+  border: 3px solid #fff;
   border-radius: 5px;
-  color: #00f;
+  color: #fff;
   padding: 6px 32px 8px 32px;
   transition: all .2s ease;
 }
 
 .cta:hover {
   color: #fff;
-  background-color: #00f;
+  border-color: rgba(255,255,255,0.13);
+  background-color: rgba(255,255,255,0.2);
   transition: all .2s ease;
 }
 

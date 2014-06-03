@@ -48,24 +48,24 @@ html.no-js
     menu
       .top-menu
         a(ui-sref="/")
-          h2(style='margin-bottom: 0' class=" {{ $stateParams.project }}") Michael E. Pierce
+          h2(style='margin-bottom: 0;color:rgba(255,255,255,0.9)' class=" {{ $stateParams.project }}") Michael E. Pierce
         p(class=" {{ $stateParams.project }}") 
         nav#controls
           a(ng-click="back()" ng-keydown="onKeydown" )
             #navigate-back
               svg(width="49" height="28" )
-                path(id="back-bg" class="hidden" fill="#e5e5e5" d="M4,0C1.8,0,0,1.8,0,4v20c0,2.2,1.8,4,4,4h45V0H4z M30.4,21l-14.1-7l14.1-7V21z")
-                polygon(id="back-tri" fill="#e5e5e5" points="30.4,21 16.3,14 30.4,7")    
+                path(id="back-bg" class="hidden" fill="rgba(255,255,255,0.9)" d="M4,0C1.8,0,0,1.8,0,4v20c0,2.2,1.8,4,4,4h45V0H4z M30.4,21l-14.1-7l14.1-7V21z")
+                polygon(id="back-tri" fill="rgba(255,255,255,0.9)" points="30.4,21 16.3,14 30.4,7")    
           a(ng-click="next()" key-nav="next()")
             #navigate-forward
               svg(width="49" height="28" )
-                path(id="forward-bg"  fill="#e5e5e5" d="M45,0H0v28h45c2.2,0,4-1.8,4-4V4C49,1.8,47.2,0,45,0z M18.6,21V7l14.1,7L18.6,21z")
-                polygon(id="forward-tri" class="hidden" fill="#e5e5e5" points="18.6,21 32.7,14 18.6,7")  
+                path(id="forward-bg"  style="fill:rgba(255,255,255,0.9)" d="M45,0H0v28h45c2.2,0,4-1.8,4-4V4C49,1.8,47.2,0,45,0z M18.6,21V7l14.1,7L18.6,21z")
+                polygon(id="forward-tri" class="hidden" style="fill: rgba(255,255,255,0.9)" points="18.6,21 32.7,14 18.6,7")  
       .sub-menu(class=" {{ $stateParams.project }}") 
         a(ui-sref="about" class=" {{ $stateParams.project }}") About <br>
         | 3322 26th Street <br>
         | San Francisco, CA <br>
-        | 415 696 9339 <br>
+        | 6nine6 93three9 <br>
         a.social(href="http://twitter.com/mp1erce" target="_blank")
           i(class="icon ion-social-twitter {{ $stateParams.project }}")
         a.social(href="http://github.com/mp1erce" target="_blank") 
