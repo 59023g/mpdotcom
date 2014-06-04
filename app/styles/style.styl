@@ -22,7 +22,7 @@ html, body, #intro
   width 100%
   
 body 
-  font-family "myriad-pro", myriad-pro, sans-serif
+  font-family Arial
   font-size 16px
   line-height 21px
   color #333
@@ -66,7 +66,7 @@ img
   border-radius 2px
   moz-border-radius 2px
   webkit-border-radius 2px
-  box-shadow 0 2px 8px rgba(0, 0, 0, 0.15)
+  //box-shadow 0 2px 8px rgba(0, 0, 0, 0.15)
   
 .container 
   width 100%
@@ -81,6 +81,7 @@ menu
   top 0px
   .top-menu 
     padding 62px 12px 12px 100px
+    transition .3s ease
     //background linear-gradient(to right,#fff 200px,rgba(255,255,255,0) 400px)
     //width 600px
     //transition background 200ms linear
@@ -89,6 +90,7 @@ menu
     bottom 12px
     left 100px
     position fixed
+    transition .3s ease
     a.social
       border-bottom none
     
@@ -155,17 +157,16 @@ menu
 .about 
   background-color #ffe534
 .bg-global-lives-project
-  background-color #42C3EC
-  color #eee
+  background-color #90DBFF
   .cta 
     &:hover
       color white
 
 .bg-orpheum
-  background-color #AAE6FF
+  background-color #90DBFF
    
 .bg-thingsthings 
-  background-color turquoise
+  background-color #90DBFF
   .cta 
     &:hover
      color white
@@ -184,7 +185,6 @@ menu
 .bg-homme
   background white
 .bg-home
-  background url('http://p.michaelepierce.com/img/feb%2017%20(9).JPG')
   background-size cover
   opacity 1
   transition opacity .5s ease
@@ -239,7 +239,8 @@ menu
 
 ////// END LOADING SPINNER 
 #intro
-  position relative
+  //background-attachment fixed 
+  //background-size cover
   height auto
   min-height 100%
   
@@ -290,13 +291,15 @@ menu
   padding 250px 0
 
 .cta 
+  display block
+  margin-top 20px 
   cursor pointer
   width 100px
   height 36px
   border 3px solid white
   border-radius 5px
   color white
-  padding 6px 32px 8px 32px    
+  padding 4px 32px 8px 30px    
   transition all .2s ease
   -o-transition all .2s ease
   -moz-transition all .2s ease
@@ -367,6 +370,7 @@ menu
     .top-menu
       padding 62px 12px 12px 6px
       margin-left 52%
+      transition .3s ease
     .sub-menu
       margin-left 52%
       left 0
@@ -389,7 +393,13 @@ menu
   #right
     max-width 47%
     margin-left 52% 
-      
+
+@media all and (max-height: 580px)
+  .sub-menu
+    opacity 0
+    z-index -99 
+    transition .3s ease
+    
   
 /////
 /*

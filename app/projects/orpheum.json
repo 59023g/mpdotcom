@@ -2,7 +2,8 @@
   "id": "orpheum",
   "images": [
     "images/projects/orpheum.jpg",
-    "images/projects/orpheum_logo.gif"
+    "images/projects/orpheum_web_2x.png",
+    "images/projects/orpheum_logo.png"
   ],
   "name": "Orpheum Theatre of Madison",
   "copy": [
@@ -15,5 +16,5 @@
     "Website"
   ],
   "url": "http://madisonorpheum.com/",
-  "layout": "top-left"
+  "layout": "side"
 }
