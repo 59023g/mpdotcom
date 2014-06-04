@@ -11,7 +11,7 @@ html.no-js
     base(href="/")
     title
     meta(name="description", content="Hello!")
-    meta(name="viewport", content="width=device-width")
+    meta(name="viewport", content="width=device-width, user-scalable=no")
     script.
       (function(d) {
         var config = {
@@ -48,8 +48,7 @@ html.no-js
     menu
       .top-menu
         a(ui-sref="/")
-          h2(style='margin-bottom: 0;color:rgba(255,255,255,0.9)' class=" {{ $stateParams.project }}") Michael E. Pierce
-        p(class=" {{ $stateParams.project }}") 
+          h2(style='margin-bottom: 0;color:rgba(255,255,255,0.9)' class=" {{ $stateParams.project }}") Michael E. Pierce 
         nav#controls
           a(ng-click="back()" ng-keydown="onKeydown" )
             #navigate-back
