@@ -47,5 +47,6 @@ angular.module('mpApp')
           }
       );
 
+  console.log($stateParams.project.layout)
     }
   ]);
