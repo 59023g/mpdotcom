@@ -268,8 +268,50 @@ menu
   max-width 628px
   margin 0 auto
   padding 125px 0px 100px 0px
-  transition .3s ease  
+  transition .3s ease
+  opacity 0
+  -webkit-animation fadein .5s ease forwards
+  -moz-animation fadein .5s ease 
+  -ms-animation fadein .5s ease
+  -webkit-animation-delay .75s
 
+.images 
+  opacity 0
+  -webkit-animation fadein .5s ease forwards
+  -moz-animation fadein .5s ease 
+  -ms-animation fadein .5s ease
+  -webkit-animation-delay 1.5s
+  
+@-webkit-keyframes fadein
+  0%
+    opacity 0
+  100%
+    opacity 1
+ 
+ @-moz-keyframes fadein
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@-ms-keyframes fadein
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@-o-keyframes fadein
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@keyframes fadein
+  0%
+    opacity 0
+  100%
+    opacity 1
+    
 .container-top 
   padding 0 15px 0 15px
   #top

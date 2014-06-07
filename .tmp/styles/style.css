@@ -273,6 +273,29 @@ menu .sub-menu a.social {
   margin: 0 auto;
   padding: 125px 0 100px 0;
   transition: .3s ease;
+  opacity: 0;
+  -webkit-animation: fadein .5s ease forwards;
+  -moz-animation: fadein .5s ease;
+  -ms-animation: fadein .5s ease;
+  -webkit-animation-delay: .75s;
+}
+
+.images {
+  opacity: 0;
+  -webkit-animation: fadein .5s ease forwards;
+  -moz-animation: fadein .5s ease;
+  -ms-animation: fadein .5s ease;
+  -webkit-animation-delay: 1.5s;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .container-top {
