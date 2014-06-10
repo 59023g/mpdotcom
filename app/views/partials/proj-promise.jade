@@ -1,0 +1,19 @@
+main#intro(class="bg-{{ $stateParams.project }}")
+  #spinnerWrap(ng-show="loadingTracker.active()")
+    #spinner
+  #content
+    .container-side 
+      #left
+        .images
+
+          .animate
+            img(ng-repeat="img in project.images" ng-src="{{ img }}"  )
+ 
+      #right 
+        div
+          h2 {{ project.name }}
+          p(ng-repeat="copy in project.copy") {{ copy }}
+          ul
+            li(ng-repeat="tag in project.tags") {{ tag }}
+        a.cta(class="{{ $stateParams.project }}" href=" {{ project.url }} " target="_blank") Visit
+      div(style="clear:both")

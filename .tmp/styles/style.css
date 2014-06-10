@@ -99,6 +99,7 @@ menu .sub-menu {
   bottom: 12px;
   position: absolute;
   transition: .3s ease;
+  line-height: 19px;
 }
 
 menu .sub-menu a.social {
@@ -154,13 +155,31 @@ menu .sub-menu a.social {
 }
 
 .home {
-  background-image: radial-gradient(at 86% bottom,rgba(221,0,255,0.2) 30%,rgba(30,184,255,0.7) 75%),radial-gradient(at left top,rgba(0,240,255,0) 0%,rgba(253,255,29,0.7) 33%),radial-gradient(circle farthest-corner at right bottom,rgba(255,255,0,0.9) 9%,rgba(255,0,0,0.2) 40%);
   background-size: cover;
+  background-color: #181818;
+  color: #fff;
   min-height: 100%;
   min-width: 100%;
   right: 0;
   z-index: -999;
   opacity: 1;
+}
+
+.home h1 {
+  line-height: 32px;
+}
+
+.home p {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.home a {
+  color: #fff;
+}
+
+.home .cta {
+  font-size: 13px;
 }
 
 .about {
@@ -289,6 +308,16 @@ menu .sub-menu a.social {
 }
 
 @-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadein {
   0% {
     opacity: 0;
   }
@@ -512,7 +541,7 @@ menu .sub-menu a.social {
   }
 }
 
-@-ms-keyframes spin {
+@keyframes spin {
   0% {
     -webkit-transform: rotateZ(0);
   }
@@ -524,14 +553,22 @@ menu .sub-menu a.social {
   }
 }
 
-@keyframes spin {
+@-webkit-keyframes fadein {
   0% {
-    -webkit-transform: rotateZ(0);
+    opacity: 0;
   }
 
   100% {
-    -webkit-transform: rotateZ(360deg);
-    -moz-transform: rotateZ(360deg);
-    -o-transform: rotateZ(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
