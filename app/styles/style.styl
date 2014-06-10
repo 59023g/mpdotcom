@@ -172,6 +172,9 @@ menu
   .cta 
     font-size 13px 
 
+.bg-mozio
+  background-color rgb(44, 57, 88)
+  color white
 .about 
   background-color #ffe534
 .bg-global-lives-project
@@ -360,10 +363,11 @@ menu
   cursor pointer
   width 100px
   height 36px
-  border 3px solid white
+  border 1px solid white
+  font-size 14px 
   border-radius 5px
   color white
-  padding 4px 32px 8px 30px    
+  padding 6px 31px 6px 34px    
   transition all .2s ease
   -o-transition all .2s ease
   -moz-transition all .2s ease
@@ -406,15 +410,18 @@ menu
   height 100%
   width 100%
   
-[ui-view].ng-enter,
+[ui-view].ng-enter
+  transition-timing-function linear
+  transition-duration 200ms
+  transition-property all
+
 [ui-view].ng-leave
   transition-timing-function linear
-  transition-duration 300ms
-  transition-property opacity
-
+  transition-duration 200ms
+  transition-property all
   
 [ui-view].ng-enter
-  opacity 0
+  opacity 1
   &.ng-enter-active
     opacity 1
 
