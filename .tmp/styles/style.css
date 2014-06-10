@@ -329,7 +329,7 @@ menu .sub-menu a.social {
   -webkit-animation: fadein .5s ease forwards;
   -moz-animation: fadein .5s ease;
   -ms-animation: fadein .5s ease;
-  -webkit-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.7s;
 }
 
 @-webkit-keyframes fadein {
