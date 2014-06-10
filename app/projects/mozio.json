@@ -1,0 +1,17 @@
+{
+  "id": "mozio",
+  "images": [
+    "images/projects/moxie_2x.png"
+  ],
+  "name": "Mozio",
+  "copy": [
+    "Mozio is a start-up located in San Francisco. Their goal is to provide a search for 'last mile' services to and from the airport.",
+    "I designed and spun-up a MVP web app in less than 48 hours."
+  ],
+  "tags": [
+    "Landing Page Design",
+    "Form UI Develop"
+  ],
+  "url": "http://mozio.com/",
+  "layout": "side"
+}
