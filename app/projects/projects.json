@@ -3,11 +3,16 @@
   "imageUrl": "img/phones/motorola-xoom.0.jpg",
   "name": "Mozio",
   "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
-},{
+}, {
   "id": "global-lives-project",
   "imageUrl": "img/phones/motorola-xoom.0.jpg",
   "name": "Global Lives Project",
   "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
+}, {
+  "id": "tint",
+  "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
+  "name": "Tint",
+  "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb)."
 }, {
   "id": "pictage-inc",
   "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
@@ -17,10 +22,5 @@
   "id": "orpheum",
   "imageUrl": "img/phones/motorola-xoom.0.jpg",
   "name": "Orpheum Theatre",
-  "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
-}, {
-  "id": "thingsthings",
-  "imageUrl": "img/phones/motorola-xoom.0.jpg",
-  "name": "thingsthings.us",
   "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
 }]

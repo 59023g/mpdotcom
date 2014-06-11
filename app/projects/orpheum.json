@@ -1,9 +1,10 @@
 {
   "id": "orpheum",
   "images": [
-    "images/projects/orpheum.jpg",
+    "images/projects/detail marquee- whs.jpg",
     "images/projects/orpheum_web_2x.png",
-    "images/projects/orpheum_logo.png"
+    "images/projects/from-mcfadden-woverlay.jpg",
+    "images/projects/orpheum_web.png"
   ],
   "name": "Orpheum Theatre of Madison",
   "copy": [
@@ -12,7 +13,7 @@
   ],
   "tags": [
     "Case Study",
-    "Branding (Proposed)",
+    "Branding",
     "Website"
   ],
   "url": "http://madisonorpheum.com/",

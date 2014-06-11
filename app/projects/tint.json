@@ -1,0 +1,17 @@
+{
+  "id": "tint",
+  "images": [
+    "images/projects/tint_05.png",
+    "images/projects/STRATER_iphone_cropped.png",
+    "images/projects/tint_04.png"
+  ],
+  "name": "Tint",
+  "copy": [
+    "Tint is a self-service platform helping brands aggregate, curate and display social feeds in their websites and social networks."
+  ],
+  "tags": [
+    "Mobile & Web Design"
+  ],
+  "url": "http://tintup.com/",
+  "layout": "side"
+}
