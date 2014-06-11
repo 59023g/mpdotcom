@@ -156,7 +156,6 @@ menu .sub-menu a.social {
 
 .home {
   background-size: cover;
-  background-color: #181818;
   color: #fff;
   min-height: 100%;
   min-width: 100%;
@@ -207,12 +206,18 @@ menu .sub-menu a.social {
   color: #fff;
 }
 
+.bg-tint {
+  color: #fff;
+  background-color: #50687f;
+}
+
 .about {
   background-color: #ffe534;
 }
 
 .bg-global-lives-project {
-  background-color: #90dbff;
+  background-color: #2386b6;
+  color: #fff;
 }
 
 .bg-global-lives-project .cta:hover {
