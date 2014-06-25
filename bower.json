@@ -10,7 +10,8 @@
     "angular-sanitize": "1.2.0",
     "angular-ui-router": "latest",
     "angular-animate": "1.2.0",
-    "ionicons": "latest"
+    "ionicons": "latest",
+    "animate-css": "~3.1.1"
   },
   "devDependencies": {
     "angular-mocks": "1.2.11",
